@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Jones Technologies Inc. - AI-Powered Title Examination for Oil & Gas, Title Insurance & Real Estate">
+<title>Jones Technologies Inc.</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #0047AB;
+    --bg-dark: #003380;
+    --bg-card: rgba(255, 255, 255, 0.08);
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: rgba(255, 255, 255, 0.5);
+    --accent: #FFD700;
+    --accent-green: #00FF88;
+    --glow-gold: rgba(255, 215, 0, 0.5);
+    --border-card: rgba(255, 215, 0, 0.3);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float 20s infinite ease-in-out;
+}
+
+.particle:nth-child(2) { left: 20%; animation-delay: -5s; animation-duration: 25s; }
+.particle:nth-child(3) { left: 40%; animation-delay: -10s; animation-duration: 22s; }
+.particle:nth-child(4) { left: 60%; animation-delay: -15s; animation-duration: 28s; }
+.particle:nth-child(5) { left: 80%; animation-delay: -3s; animation-duration: 24s; }
+.particle:nth-child(6) { left: 10%; animation-delay: -8s; animation-duration: 26s; }
+.particle:nth-child(7) { left: 70%; animation-delay: -12s; animation-duration: 21s; }
+.particle:nth-child(8) { left: 90%; animation-delay: -18s; animation-duration: 27s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(100vh) scale(0); opacity: 0; }
+    10% { opacity: 0.3; }
+    50% { transform: translateY(50vh) scale(1); opacity: 0.5; }
+    90% { opacity: 0.3; }
+}
+
+.container {
+    text-align: center;
+    z-index: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { text-shadow: 0 0 20px var(--glow-gold), 0 0 40px var(--glow-gold); }
+    50% { text-shadow: 0 0 30px var(--glow-gold), 0 0 60px var(--glow-gold), 0 0 80px var(--glow-gold); }
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    animation: title-glow 4s ease-in-out infinite;
+}
+
+@keyframes title-glow {
+    0%, 100% { text-shadow: 0 0 10px var(--glow-gold); }
+    50% { text-shadow: 0 0 20px var(--glow-gold), 0 0 40px var(--glow-gold); }
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    opacity: 0.85;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.tagline-row {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+    color: var(--accent);
+    font-weight: 600;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.coming-soon-badge {
+    background: var(--bg-card);
+    border: 2px solid var(--border-card);
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent);
+    box-shadow: 0 0 30px var(--glow-gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.transformation {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.transformation .from {
+    color: var(--text-secondary);
+    font-weight: 900;
+}
+
+.transformation .arrow {
+    color: var(--accent);
+    margin: 0 1rem;
+}
+
+.transformation .to {
+    color: var(--accent-green);
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+}
+
+.contact-block {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 0.75rem;
+    color: var(--text-primary);
+    opacity: 0.7;
+    font-weight: 400;
+    z-index: 1;
+}
+
+.contact-block a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.contact-block a:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+        letter-spacing: 0.15em;
+    }
+    .subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    .tagline-row {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+    }
+    .tagline-row {
+        flex-wrap: nowrap;
+        gap: 1rem;
+        font-size: 0.75rem;
+    }
+    .coming-soon-badge {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="particles">
+        <div class="particle" style="left: 5%;"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    <div class="container">
+        <div class="logo">&#9889;</div>
+        <h1 class="main-title">Jones Technologies Inc.</h1>
+        <p class="subtitle">AI-Powered Title Examination for Oil &amp; Gas, Title Insurance &amp; Real Estate</p>
+        <div class="tagline-row">
+            <span>Forensic Accuracy</span>
+            <span class="dot">&bull;</span>
+            <span>Lightning Speed</span>
+            <span class="dot">&bull;</span>
+            <span>Bulletproof Results</span>
+        </div>
+        <div class="transformation">
+            <span class="from">90 Days</span>
+            <span class="arrow">&rarr;</span>
+            <span class="to">24 Hours</span>
+        </div>
+        <div class="coming-soon-badge">Coming Soon</div>
+    </div>
+    <div class="contact-block">
+        <span>Dean Jones, Founder &amp; CEO</span>
+        <span><a href="mailto:dean@jonestechnologiesinc.com">dean@jonestechnologiesinc.com</a></span>
+    </div>
+</body>
+</html>
