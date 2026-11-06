@@ -9,3 +9,35 @@
 /* The cover opens only through its entry button. */
 html.entrance-locked,html.entrance-locked body{height:100%;overflow:hidden;overscroll-behavior:none}
 @media(max-height:580px){.enter{margin-top:25px}.metal-bolt{height:85px;width:70px}.enter strong{font-size:60px}.cover-caption{bottom:12px;font-size:10px}}
+
+/* A single mountain canvas keeps the complete introduction in view. */
+.entered header{position:absolute;background:transparent;padding:20px 4%}
+.entered main{min-height:100svh;min-height:100dvh;padding:78px 5% 24px;display:grid;place-items:center}
+.entered .content{width:100%;max-width:1120px}
+.entered h1{font-size:clamp(38px,4.5vw,66px);margin:16px 0 18px}
+.entered .subtitle{font-size:clamp(18px,1.6vw,22px);line-height:1.45;margin:0}
+.entered .promise{margin:18px 0;line-height:1.5}
+.entered .intro{max-width:890px;font-size:17px;line-height:1.6;margin:18px auto}
+.entered .capabilities{max-width:1100px;margin:22px auto;gap:0 20px}
+.entered .capabilities span{padding:13px 0;font-size:15px}
+.entered .vision{margin-top:22px}
+.entered .vision p{font-size:42px;margin:10px 0 20px}
+.entered .cta{display:flex;justify-content:center;align-items:center;margin:0}
+.entered .button{padding:16px 26px}
+.contact{margin-top:24px;font-size:14px;line-height:1.6;text-align:center}
+.contact p{margin:0 0 3px}.contact span{color:#c7d0d5}
+.contact a{color:var(--accent);text-underline-offset:4px}
+.contact .return-link{display:block;width:fit-content;margin:12px auto 0;font-size:12px;color:#c7d0d5}
+@media(min-width:901px) and (max-height:800px){
+ .entered main{padding:65px 4% 18px}
+ .entered h1{font-size:48px;margin:10px 0 12px}
+ .entered .subtitle{font-size:18px;line-height:1.4}
+ .entered .promise{margin:12px 0;font-size:15px}
+ .entered .intro{font-size:16px;line-height:1.5;margin:12px auto}
+ .entered .capabilities{margin:16px auto;gap:0 18px}
+ .entered .capabilities span{padding:10px 0;font-size:14px}
+ .entered .vision{margin-top:14px}.entered .vision p{font-size:36px;margin:7px 0 14px}
+ .entered .button{padding:14px 24px}.contact{margin-top:18px}.contact .return-link{margin-top:8px}
+}
+@media(max-width:900px){.entered main{padding-top:90px;padding-bottom:30px}.entered h1{font-size:clamp(36px,6vw,56px)}.entered .capabilities{max-width:650px}}
+@media(max-width:600px){.entered main{padding:82px 22px 28px}.entered .intro{font-size:16px}.entered .promise{font-size:14px}.entered .capabilities{gap:0 16px}.entered .capabilities span{font-size:14px;padding:10px 0}.entered .vision p{font-size:34px}.entered .vision p span{padding:0 10px}.contact{font-size:13px}}
