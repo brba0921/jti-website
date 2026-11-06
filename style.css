@@ -41,3 +41,14 @@ html.entrance-locked,html.entrance-locked body{height:100%;overflow:hidden;overs
 }
 @media(max-width:900px){.entered main{padding-top:90px;padding-bottom:30px}.entered h1{font-size:clamp(36px,6vw,56px)}.entered .capabilities{max-width:650px}}
 @media(max-width:600px){.entered main{padding:82px 22px 28px}.entered .intro{font-size:16px}.entered .promise{font-size:14px}.entered .capabilities{gap:0 16px}.entered .capabilities span{font-size:14px;padding:10px 0}.entered .vision p{font-size:34px}.entered .vision p span{padding:0 10px}.contact{font-size:13px}}
+
+/* Let the introduction breathe on taller desktop displays. */
+@media (min-width:901px) and (min-height:801px){
+ .entered .content{--breathing:clamp(0px,calc(5dvh - 42.5px),20px)}
+ .entered h1{margin-bottom:calc(18px + var(--breathing))}
+ .entered .promise{margin:calc(18px + var(--breathing)) 0}
+ .entered .intro{margin:calc(18px + var(--breathing)) auto}
+ .entered .capabilities{margin:calc(22px + var(--breathing)) auto}
+ .entered .vision p{margin-bottom:calc(20px + var(--breathing))}
+ .entered .contact{margin-top:calc(24px + var(--breathing))}
+}
