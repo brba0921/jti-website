@@ -1119,3 +1119,4 @@ html { scroll-behavior: smooth; }
   #discover .deed { font-size: 1.2em; }
   #discover .source__label, #discover .source__note { font-size: 1.5em; }
 }
+#discover #about { scroll-margin-top: 64px; }
