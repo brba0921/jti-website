@@ -1119,3 +1119,17 @@ html { scroll-behavior: smooth; }
   #discover .delivers li { flex: 0 1 auto; white-space: nowrap; padding-right: 0; font-size: clamp(15px, 1.2vw, 20px); }
   #discover .delivers li + li { padding-left: clamp(14px, 1.6vw, 28px); }
 }
+@media (min-width: 1024px) {
+  #discover .delivers { justify-content: flex-start; }
+  #discover .delivers li { flex: 1 1 auto; text-align: center; padding-left: 0; padding-right: 0; }
+  #discover .delivers li + li { padding-left: 0; }
+  #discover .delivers li:first-child { text-align: left; }
+  #discover .delivers li:last-child { text-align: right; }
+}
+
+#discover .delivers .sep { display: none; }
+@media (min-width: 1024px) {
+  #discover .delivers { justify-content: space-between; align-items: stretch; }
+  #discover .delivers li, #discover .delivers li + li, #discover .delivers li:first-child, #discover .delivers li:last-child { flex: 0 0 auto; text-align: left; padding-left: 0; padding-right: 0; border-left: 0; }
+  #discover .delivers .sep { display: block; width: 1px; padding: 0; margin-top: 12px; background: rgba(255,255,255,.18); }
+}
