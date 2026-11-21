@@ -1080,3 +1080,13 @@ html.is-locked, html.is-locked body { overflow: hidden; overscroll-behavior: non
 }
 #discover .hero__line { color: #E2B75E; font: italic 400 clamp(22px, 2vw, 30px)/1.35 "Libre Caslon Text", Georgia, serif; letter-spacing: 0; }
 @media (max-width: 767px) { #discover .hero__in { padding-top: 110px; padding-bottom: 72px; } }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Nav (Dean 11-21): all three links white and identical; a gold underline appears on hover for each, in both nav states. */
+#discover .nav__links a, #discover .nav.is-stuck .nav__demo { color: var(--white); background: none; padding: 13px 0; border-radius: 0; font-weight: inherit; text-decoration: none; }
+#discover .nav__demo span, #discover .nav.is-stuck .nav__demo span { padding: 0; border: 0; }
+#discover .nav__links a:hover, #discover .nav__links a:focus-visible, #discover .nav.is-stuck .nav__demo:hover {
+  background: none; color: var(--white);
+  text-decoration-line: underline; text-decoration-color: var(--gold); text-decoration-thickness: 1px; text-underline-offset: 7px;
+}
