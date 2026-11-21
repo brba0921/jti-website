@@ -1094,3 +1094,28 @@ html { scroll-behavior: smooth; }
 @media (max-width: 359px) { #discover .mark { font-size: 22px; } #discover .nav__links { gap: 8px; } }
 @media (max-height: 500px) { #discover .hero { min-height: 100svh; } #discover .hero__in { padding-top: 76px; padding-bottom: 24px; } }
 #discover .foot__place a { display: inline-block; padding: 12px 0; }
+
+#discover .hero__delivers { position: relative; z-index: 1; width: 100%; padding-bottom: clamp(28px, 4vh, 48px); }
+#discover .hero__delivers-label { margin: 0 0 12px; color: var(--mist); font: 500 13px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; }
+#discover .delivers { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); border-top: 1px solid rgba(226,183,94,.55); }
+#discover .delivers li { padding: 14px 12px 0 0; color: #fff; font: 400 clamp(15px, 1.15vw, 19px)/1.25 var(--serif-text); }
+#discover .delivers li + li { padding-left: 14px; border-left: 1px solid rgba(255,255,255,.16); }
+#discover .delivers li span { display: block; margin-bottom: 6px; color: #E2B75E; font: 500 12px/1 var(--sans); letter-spacing: .14em; }
+@media (max-width: 1023px) {
+  #discover .delivers { grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: 16px; }
+  #discover .delivers li:nth-child(5) { padding-left: 0; border-left: 0; }
+}
+@media (max-width: 767px) {
+  #discover .delivers { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 14px; }
+  #discover .delivers li:nth-child(odd) { padding-left: 0; border-left: 0; }
+  #discover .delivers li { font-size: 16px; }
+}
+#discover .hero__in { margin-top: auto; padding-bottom: 40px; }
+#discover .hero__delivers { margin-top: auto; }
+
+#discover .delivers li { padding-top: 16px; font-size: clamp(16px, 1.25vw, 20px); }
+@media (min-width: 1024px) {
+  #discover .delivers { display: flex; justify-content: space-between; }
+  #discover .delivers li { flex: 0 1 auto; white-space: nowrap; padding-right: 0; font-size: clamp(15px, 1.2vw, 20px); }
+  #discover .delivers li + li { padding-left: clamp(14px, 1.6vw, 28px); }
+}
