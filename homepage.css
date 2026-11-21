@@ -200,3 +200,9 @@
 #discover.v2 .m-label { color: #F9CF5A; }
 #discover.v2 .m-items div { color: #EEF2F7; border-left-color: rgba(249,207,90,.35); }
 #discover.v2 .m-items svg { color: #F9CF5A; }
+/* dressed-up gold subheadline: gold gradient lettering with fine gold rule beneath */
+#discover.v2 .m-sub { display: inline-block; font-size: calc(34 * var(--u)); letter-spacing: .01em; padding: 0 0 calc(10 * var(--u)) calc(4 * var(--u)); margin-top: calc(8 * var(--u));
+  background: linear-gradient(180deg, #FFE497 0%, #F9CF5A 55%, #E2AE45 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
+  text-shadow: none; border-bottom: 1px solid transparent; border-image: linear-gradient(90deg, rgba(249,207,90,.85), rgba(249,207,90,.35) 70%, rgba(249,207,90,0)) 1; }
+#discover.v2 .m-lede { margin-top: calc(16 * var(--u)); }
+@media (max-width: 900px) { #discover.v2 .m-sub { font-size: 21px; padding: 0 0 8px; } }
