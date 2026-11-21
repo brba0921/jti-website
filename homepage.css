@@ -1120,3 +1120,9 @@ html { scroll-behavior: smooth; }
   #discover .source__label, #discover .source__note { font-size: 1.5em; }
 }
 #discover #about { scroll-margin-top: 64px; }
+
+/* Gold flip + footer place (11-21) */
+#discover .hero h1 .h1-gold { color: #E2B75E; }
+#discover .hero__line { color: #FFFFFF; }
+#discover .foot__place a { color: inherit; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; }
+#discover .foot__place a:hover { color: var(--gold); }
