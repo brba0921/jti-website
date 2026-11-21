@@ -1,21 +1,11 @@
-/* ==========================================================================
-   JTI homepage, Version B
-   One stylesheet for the whole page. The first part is Version A's homepage
-   stylesheet; the part marked "Version B" near the end is what B adds.
 
-   Sizes written as clamp() scale in a straight line between a 390px and a
-   1440px viewport. Values follow "JTI Homepage: Design Specification".
-   ========================================================================== */
-
-/* Base. Version B does not load the old style.css, so these come with it. */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body { margin: 0; background: #08182B; }
 [hidden] { display: none !important; }
 
 #discover {
-  /* Color */
-  --navy: #08182B;
+    --navy: #08182B;
   --ink: #0B1D33;
   --body: #2B3644;
   --muted: #5B6573;
@@ -31,8 +21,7 @@ body { margin: 0; background: #08182B; }
   --doc-rule: #E4DFD3;
   --doc-edge: #CFC8B8;
 
-  /* Type */
-  --serif-display: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
+    --serif-display: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
   --serif-text: "Libre Caslon Text", Georgia, "Times New Roman", serif;
   --sans: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
@@ -49,8 +38,7 @@ body { margin: 0; background: #08182B; }
   --fs-li: clamp(16px, calc(0.190vw + 15.26px), 18px);
   --fs-line: clamp(16px, calc(0.381vw + 14.51px), 20px);
 
-  /* Space */
-  --pad: clamp(24px, calc(2.286vw + 15.09px), 48px);
+    --pad: clamp(24px, calc(2.286vw + 15.09px), 48px);
   --sec-bottom: clamp(88px, calc(6.095vw + 64.23px), 152px);
   --rule-to-head: clamp(18px, calc(0.762vw + 15.03px), 26px);
   --head-to-p: clamp(14px, calc(0.762vw + 11.03px), 22px);
@@ -80,7 +68,6 @@ body { margin: 0; background: #08182B; }
 
 #discover .bolt { flex: none; width: 16px; height: 21px; fill: var(--gold); }
 
-/* Headings and running text ------------------------------------------------ */
 
 #discover h1 {
   font: 400 var(--fs-h1)/1 var(--serif-display);
@@ -106,7 +93,6 @@ body { margin: 0; background: #08182B; }
 }
 #discover .lede + .lede { margin-top: clamp(12px, calc(0.381vw + 10.51px), 16px); }
 
-/* Button ------------------------------------------------------------------- */
 
 #discover .btn {
   display: inline-block;
@@ -122,7 +108,6 @@ body { margin: 0; background: #08182B; }
 #discover .btn:hover { background: #EDC777; }
 #discover .btn:active { background: #D6AB52; }
 
-/* Navigation --------------------------------------------------------------- */
 
 #discover .nav {
   position: absolute;
@@ -171,7 +156,6 @@ body { margin: 0; background: #08182B; }
 #discover .nav__demo span { padding-bottom: 5px; border-bottom: 1px solid var(--gold); }
 #discover .nav__demo:hover span { border-bottom-color: var(--white); }
 
-/* Pinned state, added by the small script at the end of index.html. */
 #discover .nav.is-stuck {
   position: fixed;
   background: rgba(8, 24, 43, .96);
@@ -194,7 +178,6 @@ body { margin: 0; background: #08182B; }
   to { transform: none; }
 }
 
-/* Hero --------------------------------------------------------------------- */
 
 #discover .hero {
   position: relative;
@@ -227,7 +210,6 @@ body { margin: 0; background: #08182B; }
     linear-gradient(180deg, rgba(8, 24, 43, .6) 0%, rgba(8, 24, 43, .14) 15%, rgba(8, 24, 43, 0) 30%,
       rgba(8, 24, 43, .34) 45%, rgba(8, 24, 43, .76) 60%, rgba(8, 24, 43, .94) 80%, #08182B 100%);
 }
-/* The script watches this strip to know when the top of the page has scrolled away. */
 #discover .hero__top { position: absolute; top: 0; left: 0; width: 1px; height: 80px; pointer-events: none; }
 #discover .hero__in { width: 100%; padding-top: clamp(200px, calc(3.810vw + 185.14px), 240px); padding-bottom: clamp(56px, calc(3.810vw + 41.14px), 96px); }
 #discover .hero__line {
@@ -239,12 +221,10 @@ body { margin: 0; background: #08182B; }
 }
 #discover .hero .btn { margin-top: clamp(28px, calc(1.143vw + 23.54px), 40px); }
 
-/* Sections on paper -------------------------------------------------------- */
 
 #discover .sec { padding-bottom: var(--sec-bottom); }
 #discover .sec--first { padding-top: clamp(56px, calc(4.571vw + 38.17px), 104px); }
 
-/* A row is a margin label (columns 1 to 3) beside its content (columns 4 to 12). */
 #discover .row {
   display: grid;
   grid-template-columns: 282px minmax(0, 1fr);
@@ -278,7 +258,6 @@ body { margin: 0; background: #08182B; }
   font: 400 var(--fs-item)/1.3 var(--serif-text);
 }
 
-/* The work product: runsheet beside the recorded instrument ---------------- */
 
 #discover .proof { container-type: inline-size; margin-top: var(--head-to-docs); }
 #discover .proof__grid {
@@ -292,8 +271,6 @@ body { margin: 0; background: #08182B; }
 #discover .proof__sheet .fit { min-width: 680px; }
 #discover .swipe { display: none; color: var(--muted); font-size: 14px; line-height: 1.4; }
 
-/* The card drops to the height of entry 3; the hairline ties the two together.
-   100cqw here is the width of .proof, so (100cqw - 306px) is the sheet's width. */
 #discover .source {
   position: relative;
   margin-top: 234px;
@@ -339,9 +316,6 @@ body { margin: 0; background: #08182B; }
   line-height: 1.45;
 }
 
-/* Sample documents --------------------------------------------------------- */
-/* Every length inside a document is in em, and the base size follows the
-   document's width, so a sheet scales as one piece like a picture would. */
 
 #discover .doc {
   border: 1px solid var(--doc-edge);
@@ -396,7 +370,6 @@ body { margin: 0; background: #08182B; }
 #discover .doc--sheet .doc__foot { gap: 2em; margin-top: 1.5em; padding-top: 0; border: 0; font-size: 1.02em; }
 #discover .mono { font-family: var(--mono); font-size: .93em; letter-spacing: -.01em; }
 
-/* Runsheet */
 #discover .sheet__meta {
   display: grid;
   grid-template-columns: 14% 16% 36% 1fr;
@@ -434,7 +407,6 @@ body { margin: 0; background: #08182B; }
 #discover .sheet__table .is-cited td:first-child { padding-left: .6em; }
 #discover .sheet__table .is-cited td:nth-child(6) { color: var(--bronze); font-weight: 500; }
 
-/* Tables inside the letter pages */
 #discover .doc__table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: .9em; line-height: 1.4; }
 #discover .doc__table th {
   padding: 0 .6em .3em 0;
@@ -453,7 +425,6 @@ body { margin: 0; background: #08182B; }
 #discover .doc__table--calls td:first-child { font-family: var(--mono); font-size: .94em; font-weight: 400; }
 #discover .doc__table--calls + .doc__text { margin-top: .7em; }
 
-/* Flowchart */
 #discover .flow { display: flex; flex-direction: column; align-items: center; margin-top: 1.3em; }
 #discover .flow__box { min-width: 13em; padding: .42em .7em; border: 1px solid var(--doc-ink); background: #fff; text-align: center; }
 #discover .flow__box b { display: block; font-size: .95em; font-weight: 600; line-height: 1.3; }
@@ -473,7 +444,6 @@ body { margin: 0; background: #08182B; }
 #discover .flow__col .flow__box b { font-size: .82em; }
 #discover .flow__branch { padding: .12em 0 .3em; font-size: .78em; font-weight: 600; line-height: 1.3; text-align: center; }
 
-/* Deed plot */
 #discover .plot { display: block; width: 100%; height: auto; margin-top: .7em; }
 #discover .plot text { fill: #2A2F36; font-family: var(--mono); font-size: 7.4px; }
 #discover .plot .mid { text-anchor: middle; }
@@ -485,7 +455,6 @@ body { margin: 0; background: #08182B; }
 #discover .plot__pob { fill: var(--gold-600); stroke: var(--doc-ink); stroke-width: .6; }
 #discover .plot__tag { fill: #fff; stroke: var(--doc-ink); stroke-width: .6; }
 
-/* The package: three pages and their captions ------------------------------ */
 
 #discover .pages {
   display: grid;
@@ -501,7 +470,6 @@ body { margin: 0; background: #08182B; }
 #discover .row--also { margin-top: clamp(40px, calc(3.048vw + 28.11px), 72px); }
 #discover .row--also .lede { margin-top: 0; }
 
-/* How it works: two ledgers ------------------------------------------------ */
 
 #discover .ledgers {
   display: grid;
@@ -523,12 +491,10 @@ body { margin: 0; background: #08182B; }
   line-height: 1.45;
 }
 
-/* Company ------------------------------------------------------------------ */
 
 #discover .signature { margin-top: clamp(24px, calc(1.524vw + 18.06px), 40px); color: var(--ink); font: italic 400 var(--fs-caption)/1.3 var(--serif-text); }
 #discover .signature__title { margin-top: 4px; color: var(--muted); font-size: 15px; line-height: 1.5; }
 
-/* Our ambition ------------------------------------------------------------- */
 
 #discover .band { padding-top: clamp(72px, calc(5.333vw + 51.20px), 128px); padding-bottom: clamp(56px, calc(3.810vw + 41.14px), 96px); background: var(--navy); color: var(--white); }
 #discover .band .label { color: var(--mist); }
@@ -552,7 +518,6 @@ body { margin: 0; background: #08182B; }
   text-wrap: pretty;
 }
 
-/* Closing ------------------------------------------------------------------ */
 
 #discover .close { position: relative; isolation: isolate; overflow: hidden; background: var(--navy); color: var(--white); }
 #discover .close__photo {
@@ -595,7 +560,6 @@ body { margin: 0; background: #08182B; }
 #discover .close__mail span { padding-bottom: 4px; border-bottom: 1px solid rgba(244, 241, 234, .55); }
 #discover .close__mail:hover span { border-bottom-color: var(--gold); }
 
-/* Footer ------------------------------------------------------------------- */
 
 #discover footer {
   background: var(--navy);
@@ -618,9 +582,7 @@ body { margin: 0; background: #08182B; }
 #discover .foot__brand .bolt { width: 12px; height: 16px; }
 #discover .foot__legal { flex: 1 1 100%; }
 
-/* Narrower screens --------------------------------------------------------- */
 
-/* Runsheet and its source card stack. */
 @media (max-width: 1149px) {
   #discover .proof__grid { grid-template-columns: minmax(0, 1fr); row-gap: clamp(14px, calc(1.714vw + 7.31px), 32px); }
   #discover .source { max-width: 420px; margin-top: 0; }
@@ -629,13 +591,11 @@ body { margin: 0; background: #08182B; }
   #discover .deed { font-size: 1.05em; }
 }
 
-/* Margin labels move above their content. */
 @media (max-width: 939px) {
   #discover .row { grid-template-columns: minmax(0, 1fr); row-gap: clamp(10px, calc(0.190vw + 9.26px), 12px); }
   #discover .label { padding-top: 0; }
 }
 
-/* Phones. */
 @media (max-width: 767px) {
   #discover .nav__links a:not(.nav__demo) { display: none; }
   #discover .hero__photo { object-position: 46% 30%; }
@@ -651,12 +611,7 @@ body { margin: 0; background: #08182B; }
   #discover .btn, #discover .nav.is-stuck .nav__demo { transition: none; }
 }
 
-/* ==========================================================================
-   Version B
-   Everything below is new in Version B. The rules above are Version A's.
-   ========================================================================== */
 
-/* Text buttons and links that sit under a document. */
 #discover .link {
   display: inline-block;
   padding: 6px 0;
@@ -675,14 +630,10 @@ body { margin: 0; background: #08182B; }
 #discover button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 #discover :where(.intro, .viewer) :is(a, button):focus-visible { outline-color: var(--white); }
 
-/* Hero: fills the window, so the entrance and the homepage share one photograph. */
 #discover { --hero-pos: 50% 30%; }
-#discover .hero { min-height: clamp(640px, 100vh, 1200px); min-height: clamp(640px, 100svh, 1200px); }
+#discover .hero { min-height: clamp(640px, 100vh, 1600px); min-height: clamp(640px, 100svh, 1600px); }
 #discover .hero__photo { object-position: var(--hero-pos); }
 
-/* Entrance ------------------------------------------------------------------ */
-/* Shown only while <html> carries has-intro (opens by itself) or has-gate
-   (waits for a click). The homepage is already on the page underneath. */
 
 #discover .intro { display: none; }
 html.has-intro #discover .intro,
@@ -695,8 +646,6 @@ html.has-gate #discover .intro {
   color: #fff;
 }
 #discover .intro__half { position: absolute; inset: 0; background: var(--navy); will-change: transform; }
-/* The same broken edge the current entrance splits along. The left half
-   overlaps the right by a pixel so no seam shows while they are closed. */
 #discover .intro__half--left {
   clip-path: polygon(0 0, calc(50% + 1px) 0, calc(48% + 1px) 12%, calc(51% + 1px) 25%, calc(49% + 1px) 38%,
     calc(52% + 1px) 51%, calc(50% + 1px) 64%, calc(53% + 1px) 78%, calc(51% + 1px) 89%, calc(54% + 1px) 100%, 0 100%);
@@ -704,14 +653,13 @@ html.has-gate #discover .intro {
 #discover .intro__half--right {
   clip-path: polygon(50% 0, 100% 0, 100% 100%, 54% 100%, 51% 89%, 53% 78%, 50% 64%, 52% 51%, 49% 38%, 51% 25%, 48% 12%);
 }
-/* Same box and same framing as the hero photograph, so the mountain holds still. */
 #discover .intro__scene {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: clamp(640px, 100vh, 1200px);
-  height: clamp(640px, 100svh, 1200px);
+  height: clamp(640px, 100vh, 1600px);
+  height: clamp(640px, 100svh, 1600px);
 }
 #discover .intro__scene img {
   position: absolute;
@@ -779,8 +727,6 @@ html.has-gate #discover .intro {
   pointer-events: none;
 }
 
-/* Opens by itself: the rule draws, the lockup clears, the mountain parts,
-   and the headline settles in. About two and a half seconds in all. */
 html.has-intro #discover .intro { animation: jti-intro-end 1ms linear 2600ms forwards; }
 html.has-intro #discover .intro__rule { animation: jti-rule 900ms cubic-bezier(.2, .7, .2, 1) 200ms backwards; }
 html.has-intro #discover .intro__lockup,
@@ -791,7 +737,6 @@ html.has-intro #discover .hero h1 { animation: jti-rise 700ms cubic-bezier(.2, .
 html.has-intro #discover .hero__line { animation: jti-rise 700ms cubic-bezier(.2, .7, .2, 1) 2100ms backwards; }
 html.has-intro #discover .hero .btn { animation: jti-rise 700ms cubic-bezier(.2, .7, .2, 1) 2250ms backwards; }
 
-/* Waits for a click: the same opening, started by site.js. */
 html.is-opening #discover .intro { animation: jti-intro-end 1ms linear 1100ms forwards; pointer-events: none; }
 html.is-opening #discover .intro__lockup,
 html.is-opening #discover .intro__tagline { animation: jti-fade-out 250ms linear forwards; }
@@ -801,11 +746,9 @@ html.is-opening #discover .hero h1 { animation: jti-rise 700ms cubic-bezier(.2, 
 html.is-opening #discover .hero__line { animation: jti-rise 700ms cubic-bezier(.2, .7, .2, 1) 600ms backwards; }
 html.is-opening #discover .hero .btn { animation: jti-rise 700ms cubic-bezier(.2, .7, .2, 1) 750ms backwards; }
 
-/* A visitor who clicks, scrolls or presses a key gets straight in. */
 html.is-skipping #discover .intro { animation: jti-fade-out 250ms linear forwards, jti-intro-end 1ms linear 250ms forwards; }
 html.is-skipping #discover :is(.hero h1, .hero__line, .hero .btn) { animation: none; }
 
-/* Hold everything until the photograph has arrived. */
 html.intro-wait #discover .intro,
 html.intro-wait #discover .intro *,
 html.intro-wait #discover :is(.hero h1, .hero__line, .hero .btn) { animation-play-state: paused !important; }
@@ -817,18 +760,14 @@ html.intro-wait #discover :is(.hero h1, .hero__line, .hero .btn) { animation-pla
 @keyframes jti-open-right { to { transform: translateX(101%); } }
 @keyframes jti-rise { from { opacity: 0; transform: translateY(18px); } }
 
-/* While the entrance waits for its click, or a document is open, the page stays put. */
 html.is-locked, html.is-locked body { overflow: hidden; overscroll-behavior: none; }
 
-/* The work product: every entry opens its instrument --------------------------- */
 
-/* The runsheet runs to a second page; let its edge show. */
 #discover .doc--stack {
-  box-shadow: 0 1px 2px rgba(11, 29, 51, .06), 7px 7px 0 -1px #fff, 7px 7px 0 0 #D5CFC1,
+  box-shadow: 0 1px 2px rgba(11, 29, 51, .06),
     0 26px 48px -26px rgba(11, 29, 51, .36);
 }
 
-/* Every number sits in from the edge, so the highlight can move between rows. */
 #discover .doc--stack .sheet__table :is(th, td):first-child { padding-left: .6em; }
 
 #discover .cite {
@@ -851,8 +790,6 @@ html.is-locked, html.is-locked body { overflow: hidden; overscroll-behavior: non
 #discover .proof.is-live .sheet__table tbody tr.is-cited td { background: var(--tint); }
 #discover .proof.is-live .sheet__table tbody tr:hover .cite { color: var(--bronze); }
 
-/* The instrument card travels to the entry it belongs to. site.js measures the
-   row and sets the two lengths; without it, Version A's fixed position applies. */
 #discover .proof.is-live .source { margin-top: 0; transform: translateY(var(--card-y, 0px)); }
 #discover .proof.is-live .source::before { top: var(--link-top, 0px); }
 #discover .proof.is-moving .source { transition: transform .35s cubic-bezier(.3, .7, .2, 1); }
@@ -869,14 +806,13 @@ html.is-locked, html.is-locked body { overflow: hidden; overscroll-behavior: non
 }
 #discover .proof__hint .link { margin-left: 6px; padding: 0; font-size: 14px; }
 
-/* Phones: one entry at a time, in place of the sideways sheet. */
 #discover .entry {
   display: none;
   min-width: 0;
   padding: 20px 20px 10px;
   border: 1px solid var(--doc-edge);
   background: #fff;
-  box-shadow: 0 1px 2px rgba(11, 29, 51, .06), 7px 7px 0 -1px #fff, 7px 7px 0 0 #D5CFC1,
+  box-shadow: 0 1px 2px rgba(11, 29, 51, .06),
     0 26px 48px -26px rgba(11, 29, 51, .36);
   color: var(--doc-ink);
 }
@@ -925,13 +861,11 @@ html.is-locked, html.is-locked body { overflow: hidden; overscroll-behavior: non
 #discover .entry__fields .is-ref dd { color: var(--bronze); font-weight: 500; }
 #discover .entry__all { padding: 13px 0; }
 
-/* The package: open any page full size, and take the sample away ---------------- */
 
 #discover .fig__view { margin-top: clamp(0px, calc(0.381vw - 1.49px), 4px); }
 #discover .pages.is-live .doc { cursor: zoom-in; }
 #discover .sample { margin-top: clamp(6px, calc(0.571vw + 3.77px), 12px); font-size: clamp(16px, calc(0.190vw + 15.26px), 18px); }
 
-/* Document viewer ------------------------------------------------------------ */
 
 #discover .viewer {
   position: fixed;
@@ -1005,13 +939,11 @@ html.is-locked, html.is-locked body { overflow: hidden; overscroll-behavior: non
   overscroll-behavior: contain;
   outline: none;
 }
-/* A letter page fills the height of the stage; the runsheet takes the width it needs. */
 #discover .viewer { --doc-w: min(100%, clamp(480px, calc((100vh - 140px) * .7727), 960px)); }
 #discover .viewer[data-kind="sheet"] { --doc-w: clamp(894px, calc((100vh - 140px) * 1.28), 1200px); }
 #discover .viewer__doc { width: var(--doc-w); margin-inline: auto; }
 #discover .viewer__doc .doc { box-shadow: none; cursor: auto; }
 
-/* Narrower screens ----------------------------------------------------------- */
 
 @media (max-width: 1149px) {
   #discover .proof.is-live .source { transform: none; }
@@ -1070,7 +1002,6 @@ html.is-locked, html.is-locked body { overflow: hidden; overscroll-behavior: non
   #discover .viewer__btn { transition: none; }
 }
 
-/* Hero option 1 (Dean 11-21): title raised to mid-screen, left-aligned with the logo; gold italic subline. */
 #discover .hero { justify-content: center; }
 #discover .hero__in { padding-top: 120px; padding-bottom: 120px; }
 #discover .hero::after {
@@ -1083,7 +1014,6 @@ html.is-locked, html.is-locked body { overflow: hidden; overscroll-behavior: non
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-/* Nav (Dean 11-21): all three links white and identical; a gold underline appears on hover for each, in both nav states. */
 #discover .nav__links a, #discover .nav.is-stuck .nav__demo { color: var(--white); background: none; padding: 13px 0; border-radius: 0; font-weight: inherit; text-decoration: none; }
 #discover .nav__demo span, #discover .nav.is-stuck .nav__demo span { padding: 0; border: 0; }
 #discover .nav__links a:hover, #discover .nav__links a:focus-visible, #discover .nav.is-stuck .nav__demo:hover {
@@ -1091,7 +1021,6 @@ html { scroll-behavior: smooth; }
   text-decoration-line: underline; text-decoration-color: var(--gold); text-decoration-thickness: 1px; text-underline-offset: 7px;
 }
 
-/* Borrowed from the GPT review (11-21) */
 #discover .xnote { margin: clamp(28px, 3vw, 44px) 0 0; max-width: 760px; padding: 20px 24px 20px 22px; border-left: 3px solid var(--gold); background: rgba(226,183,94,.10); }
 #discover .xnote__label { margin: 0 0 8px; font: 600 13px/1 "Libre Franklin", Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-600); }
 #discover .xnote__text { margin: 0; font: 400 clamp(19px, 1.4vw, 22px)/1.45 "Libre Caslon Text", Georgia, serif; color: var(--navy); }
@@ -1106,11 +1035,8 @@ html { scroll-behavior: smooth; }
 @media (max-width: 767px) { #discover .nav__links { gap: 14px; font-size: 13px; } #discover .mark { font-size: 26px; } }
 @media (max-width: 380px) { #discover .nav__links { gap: 10px; font-size: 12px; } }
 
-/* Final audit fixes (11-21) */
-/* 1. Examiner's note: readable contrast on cream */
 #discover .xnote__label { color: #7A5A12; }
 #discover .xnote__who { color: #3F4855; }
-/* 2. Recorded-instrument card: wider column, larger deed text on desktop */
 @media (min-width: 1150px) {
   #discover .proof__grid { grid-template-columns: minmax(0, 1fr) 340px; }
   #discover .source { margin-top: calc((100cqw - 364px) * .262); }
@@ -1119,10 +1045,52 @@ html { scroll-behavior: smooth; }
   #discover .deed { font-size: 1.2em; }
   #discover .source__label, #discover .source__note { font-size: 1.5em; }
 }
-#discover #about { scroll-margin-top: 64px; }
+#discover #about { scroll-margin-top: -20px; }
 
-/* Gold flip + footer place (11-21) */
 #discover .hero h1 .h1-gold { color: #E2B75E; }
 #discover .hero__line { color: #FFFFFF; }
 #discover .foot__place a { color: inherit; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; }
 #discover .foot__place a:hover { color: var(--gold); }
+
+#discover .flow__box--open { border-style: dashed; background: #fff; }
+#discover .viewer__doc { container-type: inline-size; }
+#discover .viewer { --doc-w: min(100%, clamp(600px, calc((100vh - 140px) * .7727), 760px)); }
+#discover .viewer[data-kind="sheet"] { --doc-w: 1340px; }
+@media (max-width: 767px) {
+  #discover .viewer { --doc-w: 600px; }
+  #discover .viewer[data-kind="sheet"] { --doc-w: 1340px; }
+}
+#discover .viewer__instrument { margin: 24px auto 8px; max-width: 760px; color: var(--white); }
+#discover .viewer__instrument-hint { margin: 0; color: var(--mist); font-size: 15px; }
+#discover .viewer__instrument-label { margin: 0 0 10px; font-size: 15px; font-weight: 600; }
+#discover .viewer__instrument .deed { font-size: 15px; color: #2A2F36; }
+#discover .viewer__instrument .source__note { margin-top: 10px; color: var(--mist); font-size: 15px; line-height: 1.5; }
+#discover .viewer__doc .cite { font: inherit; cursor: pointer; }
+@media (max-width: 767px) {
+  #discover .nav:not(.is-stuck) { background: rgba(8, 24, 43, .45); }
+}
+#discover .flow { margin-top: .9em; font-size: .9em; }
+#discover .flow__box { padding: .32em .6em; }
+#discover .flow__link::before, #discover .flow__link::after { height: .42em; }
+#discover .flow__link span { padding: .06em 0; }
+
+#discover .proof__hint { margin: 0 0 14px; }
+#discover .proof {
+  --proof-w: min(1440px, calc(100vw - 2 * var(--pad) - 16px));
+  margin-inline: min(0px, calc((100% - var(--proof-w)) / 2));
+}
+@media (min-width: 768px) {
+  #discover .viewer[data-kind="sheet"] { --doc-w: min(calc(100vw - 80px), 1280px); }
+}
+@media (max-width: 1149px) {
+  #discover .source { max-width: 560px; }
+  #discover .source__scale { font-size: 12px; }
+}
+@media (min-width: 768px) and (max-width: 989px) {
+  #discover .proof__sheet { overflow-x: auto; }
+  #discover .proof__sheet .fit { min-width: 894px; }
+  #discover .swipe { display: block; }
+}
+@media (max-width: 359px) { #discover .mark { font-size: 22px; } #discover .nav__links { gap: 8px; } }
+@media (max-height: 500px) { #discover .hero { min-height: 100svh; } #discover .hero__in { padding-top: 76px; padding-bottom: 24px; } }
+#discover .foot__place a { display: inline-block; padding: 12px 0; }

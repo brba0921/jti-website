@@ -1,13 +1,4 @@
-/* Web fonts for the JTI site, embedded in this file.
-
-   Libre Caslon Display, Libre Caslon Text   (c) The Libre Caslon Text Project Authors
-   Libre Franklin                            (c) The Libre Franklin Project Authors
-   IBM Plex Mono                             (c) IBM Corp.
-
-   All four are licensed under the SIL Open Font License 1.1 (https://openfontlicense.org).
-   They are embedded so the pages look right when opened from a folder, with or without
-   an internet connection. For the live site the same six files can be served as separate
-   .woff2 files instead; the @font-face rules stay the same apart from the src line. */
+/* Libre Caslon Display, Libre Caslon Text, Libre Franklin, IBM Plex Mono: SIL Open Font License 1.1 (https://openfontlicense.org). */
 @font-face{font-family:"Libre Caslon Display";font-style:normal;font-weight:400;font-display:block;src:url("assets/fonts/LibreCaslonDisplay-400-normal.woff2") format("woff2")}
 @font-face{font-family:"Libre Caslon Text";font-style:normal;font-weight:400;font-display:block;src:url("assets/fonts/LibreCaslonText-400-normal.woff2") format("woff2")}
 @font-face{font-family:"Libre Caslon Text";font-style:italic;font-weight:400;font-display:block;src:url("assets/fonts/LibreCaslonText-400-italic.woff2") format("woff2")}
