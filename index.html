@@ -18,6 +18,8 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" as="image" href="assets/summit.jpg">
+<link rel="preload" href="assets/fonts/LibreCaslonDisplay-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/LibreFranklin-100-900-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="homepage.css">
 <script>
@@ -90,14 +92,14 @@
   </div>
 </div></section>
 
-<!-- The work product: a sample run sheet. Select any entry and the recorded instrument behind it opens
+<!-- The work product: a sample runsheet. Select any entry and the recorded instrument behind it opens
      beside the sheet. All data here is illustrative. Replace with real output relabeled as Sample Parcel. -->
 <section class="sec" id="work"><div class="wrap">
   <div class="row row--rule">
     <p class="label">The work product</p>
     <div>
       <h2>Every entry cites the recorded instrument.</h2>
-      <p class="lede">JTI pulls the county records, builds the chain of title and prepares the run sheet. Each line carries the book and page of the instrument it came from, so your examiner can check any entry against the record.</p>
+      <p class="lede">JTI pulls the county records, builds the chain of title and prepares the runsheet. Each line carries the book and page of the instrument it came from, so your examiner can check any entry against the record.</p>
     </div>
   </div>
 
@@ -107,7 +109,7 @@
         <div class="doc__top">
           <div>
             <div class="doc__brand"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>Jones Technologies, Inc.</div>
-            <p class="doc__title">Run Sheet</p>
+            <p class="doc__title">Runsheet</p>
           </div>
           <span class="doc__tag">Sample data</span>
         </div>
@@ -117,7 +119,7 @@
           <div><dt>Description</dt><dd>80.00 acres in the NE¼, Section 12</dd></div>
           <div><dt>Period searched</dt><dd>Patent (1838) to 10/30/2026</dd></div>
         </dl>
-        <table class="sheet__table" aria-label="Sample run sheet">
+        <table class="sheet__table" aria-label="Sample runsheet">
           <colgroup><col style="width:4.7%"><col style="width:13.1%"><col style="width:16.3%"><col style="width:16.3%"><col style="width:10.8%"><col style="width:15.4%"><col style="width:23.4%"></colgroup>
           <thead><tr><th scope="col">No.</th><th scope="col">Instrument</th><th scope="col">Grantor</th><th scope="col">Grantee</th><th scope="col">Dated<br>Recorded</th><th scope="col">Book and page</th><th scope="col">Description and remarks</th></tr></thead>
           <tbody>
@@ -136,11 +138,11 @@
       </div>
     </div></div>
     <p class="swipe">Swipe the sheet sideways to read every column.</p>
-    <!-- Phones: the run sheet one entry at a time. site.js fills these fields from the table above.
+    <!-- Phones: the runsheet one entry at a time. site.js fills these fields from the table above.
          Without JavaScript this card stays hidden and the sheet above scrolls sideways instead. -->
-    <div class="entry" aria-label="Sample run sheet, one entry at a time">
+    <div class="entry" aria-label="Sample runsheet, one entry at a time">
       <div class="entry__top"><div class="doc__brand"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>Jones Technologies, Inc.</div><span class="doc__tag">Sample data</span></div>
-      <p class="entry__title">Run Sheet</p>
+      <p class="entry__title">Runsheet</p>
       <div class="entry__bar">
         <p class="entry__count" aria-live="polite">Entry 3 of 9</p>
         <div class="entry__nav">
@@ -157,7 +159,7 @@
         <div class="is-ref"><dt>Book and page</dt><dd class="mono" data-f="ref">DV 98, Pg. 215</dd></div>
         <div><dt>Remarks</dt><dd data-f="remarks">80.00 acres. Grantor excepts and reserves ½ of the oil and gas.</dd></div>
       </dl>
-      <button type="button" class="link entry__all" data-view="0" hidden>View the full run sheet</button>
+      <button type="button" class="link entry__all" data-view="0" hidden>View the full runsheet</button>
     </div>
     <aside class="source" id="instrument" aria-label="The recorded instrument behind entry 3" aria-live="polite"><div class="fit"><div class="source__scale">
       <p class="source__label">The recorded instrument</p>
@@ -266,7 +268,7 @@
     <p class="label">The package</p>
     <div>
       <h2>The full abstract, ready for examination.</h2>
-      <p class="lede">The same research produces the rest of the package. Each document draws on the same recorded instruments as the run sheet.</p>
+      <p class="lede">The same research produces the rest of the package. Each document draws on the same recorded instruments as the runsheet.</p>
     </div>
   </div>
 
@@ -408,7 +410,7 @@
           <ul>
             <li>Pulls the county records</li>
             <li>Builds the chain of title</li>
-            <li>Prepares the run sheet, reports, maps and plots</li>
+            <li>Prepares the runsheet, reports, maps and plots</li>
             <li>Cites the recorded instrument for each entry</li>
           </ul>
         </div>
@@ -473,7 +475,7 @@
 <!-- Document viewer. Empty until site.js opens a sample document in it. -->
 <div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-title" hidden>
   <div class="viewer__bar">
-    <div class="viewer__what"><p class="viewer__title" id="viewer-title">Run sheet</p><span class="viewer__tag">Sample data</span></div>
+    <div class="viewer__what"><p class="viewer__title" id="viewer-title">Runsheet</p><span class="viewer__tag">Sample data</span></div>
     <div class="viewer__pager">
       <p class="viewer__hint">Pinch to zoom. Drag to move.</p>
       <div class="viewer__steps">
