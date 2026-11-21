@@ -206,3 +206,4 @@
   text-shadow: none; border-bottom: 1px solid transparent; border-image: linear-gradient(90deg, rgba(249,207,90,.85), rgba(249,207,90,.35) 70%, rgba(249,207,90,0)) 1; }
 #discover.v2 .m-lede { margin-top: calc(16 * var(--u)); }
 @media (max-width: 900px) { #discover.v2 .m-sub { font-size: 21px; padding: 0 0 8px; } }
+#discover.v2 .m-items { grid-template-columns: repeat(8, minmax(0, 1fr)); } @media (max-width: 900px) { #discover.v2 .m-items { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
