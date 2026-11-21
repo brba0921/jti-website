@@ -1112,3 +1112,5 @@ html { scroll-behavior: smooth; }
 }
 #discover .hero__in { margin-top: auto; padding-bottom: 40px; }
 #discover .hero__delivers { margin-top: auto; }
+
+#discover .delivers li { padding-top: 16px; font-size: clamp(16px, 1.25vw, 20px); }
