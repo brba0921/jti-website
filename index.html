@@ -1,98 +1,487 @@
 <!doctype html>
-<html lang="en" class="entrance-locked"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jones Technologies Inc | JTI</title><meta name="description" content="Title Examination. Reimagined. AI-powered research. Human-verified results. For oil and gas, real estate and title insurance. Book a demonstration."><meta property="og:title" content="JTI | Title Examination. Reimagined."><meta property="og:description" content="AI-powered research. Human-verified results. For oil &amp; gas, real estate and title insurance."><meta property="og:image" content="https://jonestechnologiesinc.com/assets/og-image.jpg"><meta property="og:url" content="https://jonestechnologiesinc.com/"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#08182b"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="homepage.css"></head>
-<body><header><a class="brand" href="#entrance"><strong>JTI</strong><span>JONES TECHNOLOGIES INC</span></a></header>
-<section id="entrance" aria-label="Welcome to JTI"><div class="mountain"></div><button class="enter" type="button" aria-label="Enter Jones Technologies" aria-controls="discover"><svg class="metal-bolt" viewBox="0 0 120 158" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><linearGradient id="metal" x1=".08" y1="0" x2=".88" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="var(--metal-hi)"/><stop offset=".36" stop-color="var(--accent)"/><stop offset=".51" stop-color="var(--metal-hi)"/><stop offset=".54" stop-color="var(--metal-mid)"/><stop offset="1" stop-color="var(--accent)"/></linearGradient></defs><path d="M95 5 10 92h46l-24 62 78-95H71z" fill="#06090c" stroke="#0a0c0f" stroke-width="7" transform="translate(0 3)"/><path d="M95 5 10 92h46l-24 62 78-95H71z" fill="url(#metal)" stroke="var(--metal-hi)" stroke-width="1.5"/><path d="M95 5 67 69 10 92z" fill="var(--metal-shine)" opacity=".68"/><path d="M67 69 110 59 32 154z" fill="var(--metal-mid)" opacity=".8"/><path d="m32 154 35-85 43-10" fill="none" stroke="var(--metal-hi)" opacity=".87" stroke-width="1.15"/></svg><strong>JTI</strong><span>CLICK JTI TO ENTER</span></button><p class="cover-caption">A NEW PERSPECTIVE ON TITLE</p></section>
-<main id="discover" class="v3" tabindex="-1" hidden>
-<nav class="v3nav"><div class="wrap">
-  <a class="brand" href="#discover"><svg viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z" fill="#e2b75e"/></svg><b>JTI</b></a>
-  <div class="links"><a href="#work">Solutions</a><a href="#about">Company</a><a href="https://calendly.com/dean-jonestechnologiesinc/30min" target="_blank" rel="noopener noreferrer">Request a demo</a></div>
+<html lang="en" class="has-intro" data-intro="once">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jones Technologies Inc | JTI</title>
+<meta name="description" content="Title Examination. Reimagined. AI-powered research. Human-verified results. For oil and gas, real estate and title insurance. Book a demonstration.">
+<meta property="og:title" content="JTI | Title Examination. Reimagined.">
+<meta property="og:description" content="AI-powered research. Human-verified results. For oil &amp; gas, real estate and title insurance.">
+<meta property="og:image" content="https://jonestechnologiesinc.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://jonestechnologiesinc.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#08182b">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/summit.jpg">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="homepage.css">
+<script>
+/* Decide before the first paint whether the entrance plays.
+   It is skipped when the address points into the page (a link to #work, say).
+   data-intro on <html>: "always" plays it on every load; "once" plays it once per visit. */
+(function (r) {
+  r.classList.add('js');
+  var skip = !!location.hash && location.hash !== '#entrance';
+  if (!skip && r.getAttribute('data-intro') === 'once') {
+    try { skip = !!sessionStorage.getItem('jti-entered'); sessionStorage.setItem('jti-entered', '1'); } catch (e) {}
+  }
+  if (skip) { r.classList.remove('has-intro', 'has-gate'); return; }
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (r.classList.contains('has-intro')) {
+    r.classList.add('intro-wait');   /* released by site.js once the photograph is in */
+    setTimeout(function () { r.classList.remove('intro-wait'); }, 1500);
+  }
+})(document.documentElement);
+</script>
+</head>
+<body>
+<main id="discover" tabindex="-1">
+
+<!-- Entrance: opens by itself after about two and a half seconds. The homepage is already on the page beneath it. -->
+<div class="intro" id="entrance" aria-hidden="true">
+  <div class="intro__half intro__half--left"><div class="intro__scene"><img src="assets/summit.jpg" alt="" width="1672" height="941"></div></div>
+  <div class="intro__half intro__half--right"><div class="intro__scene"><img src="assets/summit.jpg" alt="" width="1672" height="941"></div></div>
+  <div class="intro__lockup">
+    <svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>
+    <p class="intro__name">JTI</p>
+    <span class="intro__rule"></span>
+    <p class="intro__company">Jones Technologies, Inc.</p>
+  </div>
+  <p class="intro__tagline">A new perspective on title.</p>
+</div>
+
+<!-- Navigation -->
+<nav class="nav" aria-label="Primary"><div class="wrap nav__in">
+  <a class="mark" href="#discover" aria-label="JTI home"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>JTI</a>
+  <div class="nav__links">
+    <a href="#work">Product</a>
+    <a href="#company">Company</a>
+    <a class="nav__demo" href="https://calendly.com/dean-jonestechnologiesinc/30min" target="_blank" rel="noopener noreferrer"><span>Request a Demo</span></a>
+  </div>
 </div></nav>
 
-<div class="hero"><div class="wrap">
-  <h1>Title Examination. Reimagined.</h1>
-  <p class="tag">AI-powered research. Human-verified results.</p>
-  <p class="lead">Purpose-built technology that researches the county record and assembles the chain of title, ready for professional review.</p>
-  <div class="ctas"><a class="btn solid" href="#work">See how it works</a></div>
-</div>
-<div class="for"><div class="wrap"><p>For oil &amp; gas, real estate and title insurance</p></div></div>
+<!-- Hero -->
+<div class="hero">
+  <img class="hero__photo" src="assets/summit.jpg" alt="" width="1672" height="941">
+  <div class="hero__top"></div>
+  <div class="wrap hero__in">
+    <h1>Title Examination.<br>Reimagined.</h1>
+    <p class="hero__line">AI-Powered Research. Human-Verified Results.</p>
+    <a class="btn" href="https://calendly.com/dean-jonestechnologiesinc/30min" target="_blank" rel="noopener noreferrer">Request a Demo</a>
+  </div>
 </div>
 
-<section id="work"><div class="wrap sol">
-  <div class="sol-copy">
-    <p class="eyebrow">Solutions</p>
-    <h2>Everything an abstract requires, assembled for review.</h2>
-    <p class="lead">Each deliverable is built from the county record and cites the instrument it came from. Order the complete package or only the pieces your team needs.</p>
-    <ul class="deliv">
-      <li>Chain of Title</li><li>Ownership Reports</li><li>Runsheets</li><li>Tax Records</li>
-      <li>Mapping</li><li>Deed Plots</li><li>Flow Charts</li><li>Abstract Packages</li>
-    </ul>
-    <p class="custom">Custom solutions, tailored to your workflow, on request.</p>
+<!-- What JTI is -->
+<section class="sec sec--first" id="about" aria-label="What JTI is"><div class="wrap">
+  <div class="row row--rule">
+    <p class="label">What JTI is</p>
+    <p class="statement">Purpose-built technology that accelerates land and title research, with professional examination and oversight. The result is accurate, defensible title work, delivered faster and at scale.</p>
   </div>
-  <figure class="shot">
-    <div class="win"><div class="bar"><i></i><i></i><i></i><span>JTI</span></div>
-      <div class="app">
-        <div class="ap-head"><b>Sample Parcel</b><span>Sample County · Initial research complete</span></div>
-        <div class="ap-stats"><div><b>30</b><span>Documents</span></div><div><b>572</b><span>Instruments indexed</span></div><div><b>18</b><span>Chain links</span></div><div><b>15m 27s</b><span>Research time</span></div></div>
-        <div class="ap-rows">
-          <div><span>Chain of Title</span><em>Ready</em></div><div><span>Runsheet</span><em>Ready</em></div><div><span>Ownership Report</span><em>Ready</em></div><div><span>Abstract Package</span><em>Ready</em></div><div><span>Final examination</span><em class="p">Examiner review</em></div>
+  <div class="row row--builtfor">
+    <p class="label">Built for</p>
+    <ul class="builtfor"><li>Oil &amp; Gas</li><li>Real Estate</li><li>Title Insurance</li></ul>
+  </div>
+</div></section>
+
+<!-- The work product: a sample run sheet. Select any entry and the recorded instrument behind it opens
+     beside the sheet. All data here is illustrative. Replace with real output relabeled as Sample Parcel. -->
+<section class="sec" id="work"><div class="wrap">
+  <div class="row row--rule">
+    <p class="label">The work product</p>
+    <div>
+      <h2>Every entry cites the recorded instrument.</h2>
+      <p class="lede">JTI pulls the county records, builds the chain of title and prepares the run sheet. Each line carries the book and page of the instrument it came from, so your examiner can check any entry against the record.</p>
+    </div>
+  </div>
+
+  <div class="proof"><div class="proof__grid">
+    <div class="proof__sheet"><div class="fit">
+      <div class="doc doc--sheet doc--stack">
+        <div class="doc__top">
+          <div>
+            <div class="doc__brand"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>Jones Technologies, Inc.</div>
+            <p class="doc__title">Run Sheet</p>
+          </div>
+          <span class="doc__tag">Sample data</span>
         </div>
-      </div></div>
-  </figure>
+        <dl class="sheet__meta">
+          <div><dt>Tract</dt><dd>Sample Parcel</dd></div>
+          <div><dt>County</dt><dd>Sample County</dd></div>
+          <div><dt>Description</dt><dd>80.00 acres in the NE¼, Section 12</dd></div>
+          <div><dt>Period searched</dt><dd>Patent (1838) to 10/30/2026</dd></div>
+        </dl>
+        <table class="sheet__table" aria-label="Sample run sheet">
+          <colgroup><col style="width:4.7%"><col style="width:13.1%"><col style="width:16.3%"><col style="width:16.3%"><col style="width:10.8%"><col style="width:15.4%"><col style="width:23.4%"></colgroup>
+          <thead><tr><th scope="col">No.</th><th scope="col">Instrument</th><th scope="col">Grantor</th><th scope="col">Grantee</th><th scope="col">Dated<br>Recorded</th><th scope="col">Book and page</th><th scope="col">Description and remarks</th></tr></thead>
+          <tbody>
+            <tr data-entry="1"><td class="mono">1</td><td>Patent</td><td>United States of America</td><td>Elias Harper</td><td class="mono">03/14/1838<br>04/02/1838</td><td class="mono">Pat. 2, Pg. 114</td><td>NE¼ of Section 12, 160.00 acres. Origin of title.</td></tr>
+            <tr data-entry="2"><td class="mono">2</td><td>Warranty Deed</td><td>Elias Harper and wife</td><td>Jacob Harper</td><td class="mono">09/20/1871<br>09/27/1871</td><td class="mono">DV 31, Pg. 402</td><td>Conveys the subject 80.00 acres out of the NE¼.</td></tr>
+            <tr data-entry="3" class="is-cited"><td class="mono">3</td><td>Warranty Deed</td><td>Jacob Harper, widower</td><td>Samuel T. Dawson</td><td class="mono">05/11/1921<br>05/14/1921</td><td class="mono">DV 98, Pg. 215</td><td>80.00 acres. Grantor excepts and reserves ½ of the oil and gas.</td></tr>
+            <tr data-entry="4"><td class="mono">4</td><td>Certificate of Transfer</td><td>Estate of Jacob Harper, deceased</td><td>Ruth Harper Keller; Thomas J. Harper</td><td class="mono">02/03/1931<br>02/10/1931</td><td class="mono">DV 112, Pg. 66</td><td>Reserved ½ oil and gas, in equal shares (¼ each).</td></tr>
+            <tr data-entry="5"><td class="mono">5</td><td>Oil and Gas Lease</td><td>Samuel T. Dawson and wife</td><td>Sample Oil Company</td><td class="mono">08/16/1951<br>09/04/1951</td><td class="mono">LV 22, Pg. 310</td><td>80.00 acres, 10-year primary term. Released at entry 6.</td></tr>
+            <tr data-entry="6"><td class="mono">6</td><td>Release of Lease</td><td>Sample Oil Company</td><td>Samuel T. Dawson and wife</td><td class="mono">10/05/1962<br>10/22/1962</td><td class="mono">LV 39, Pg. 12</td><td>Releases the lease at LV 22, Pg. 310.</td></tr>
+            <tr data-entry="7"><td class="mono">7</td><td>Warranty Deed</td><td>Samuel T. Dawson and wife</td><td>Harlan E. Whitfield and wife</td><td class="mono">05/28/1966<br>06/02/1966</td><td class="mono">DV 187, Pg. 77</td><td>80.00 acres, subject to the reservation at DV 98, Pg. 215.</td></tr>
+            <tr data-entry="8"><td class="mono">8</td><td>Mortgage</td><td>Harlan E. Whitfield and wife</td><td>Sample County Savings Bank</td><td class="mono">05/28/1966<br>06/02/1966</td><td class="mono">MV 74, Pg. 141</td><td>Released at MV 131, Pg. 9 (03/14/1986).</td></tr>
+            <tr data-entry="9"><td class="mono">9</td><td>Warranty Deed</td><td>Mary L. Whitfield, widow</td><td>Miller Ridge Farms LLC</td><td class="mono">07/09/2009<br>07/15/2009</td><td class="mono">OR 412, Pg. 1184</td><td>80.00 acres. Current owner of record.</td></tr>
+          </tbody>
+        </table>
+        <div class="doc__foot"><span>Research by JTI. Examined by J. Sample, Title Examiner, 11/02/2026.</span><span>Page 1 of 2</span></div>
+      </div>
+    </div></div>
+    <p class="swipe">Swipe the sheet sideways to read every column.</p>
+    <!-- Phones: the run sheet one entry at a time. site.js fills these fields from the table above.
+         Without JavaScript this card stays hidden and the sheet above scrolls sideways instead. -->
+    <div class="entry" aria-label="Sample run sheet, one entry at a time">
+      <div class="entry__top"><div class="doc__brand"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>Jones Technologies, Inc.</div><span class="doc__tag">Sample data</span></div>
+      <p class="entry__title">Run Sheet</p>
+      <div class="entry__bar">
+        <p class="entry__count" aria-live="polite">Entry 3 of 9</p>
+        <div class="entry__nav">
+          <button type="button" data-step="-1" aria-label="Previous entry"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
+          <button type="button" data-step="1" aria-label="Next entry"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></button>
+        </div>
+      </div>
+      <dl class="entry__fields">
+        <div><dt>Instrument</dt><dd data-f="instrument">Warranty Deed</dd></div>
+        <div><dt>Grantor</dt><dd data-f="grantor">Jacob Harper, widower</dd></div>
+        <div><dt>Grantee</dt><dd data-f="grantee">Samuel T. Dawson</dd></div>
+        <div><dt>Dated</dt><dd class="mono" data-f="dated">05/11/1921</dd></div>
+        <div><dt>Recorded</dt><dd class="mono" data-f="recorded">05/14/1921</dd></div>
+        <div class="is-ref"><dt>Book and page</dt><dd class="mono" data-f="ref">DV 98, Pg. 215</dd></div>
+        <div><dt>Remarks</dt><dd data-f="remarks">80.00 acres. Grantor excepts and reserves ½ of the oil and gas.</dd></div>
+      </dl>
+      <button type="button" class="link entry__all" data-view="0" hidden>View the full run sheet</button>
+    </div>
+    <aside class="source" id="instrument" aria-label="The recorded instrument behind entry 3" aria-live="polite"><div class="fit"><div class="source__scale">
+      <p class="source__label">The recorded instrument</p>
+      <div class="source__card" data-entry="1" hidden>
+        <div class="deed">
+          <div class="deed__head"><span>PATENT RECORD VOL. 2</span><span>114</span></div>
+          <p>THE UNITED STATES OF AMERICA, to all to whom these presents shall come, Greeting:</p>
+          <p class="deed__clause">have given and granted, and by these presents do give and grant, unto the said Elias Harper, and to his heirs, the North East quarter of Section Twelve, containing one hundred and sixty acres.</p>
+          <p>Given under my hand, at the City of Washington, the fourteenth day of March, 1838.</p>
+          <p class="deed__stamp">Received for record April 2, 1838. Recorded in Patent Record Vol. 2, Page 114. Recorder, Sample County.</p>
+        </div>
+        <p class="source__note">Entry 1 points to Patent Vol. 2, Pg. 114: the patent out of the United States, where the chain begins.</p>
+      </div>
+      <div class="source__card" data-entry="2" hidden>
+        <div class="deed">
+          <div class="deed__head"><span>DEED RECORD VOL. 31</span><span>402</span></div>
+          <p>KNOW ALL MEN BY THESE PRESENTS, that Elias Harper and wife, in consideration of the sum to them paid by Jacob Harper,</p>
+          <p class="deed__clause">do hereby grant, bargain, sell and convey unto the said Jacob Harper, his heirs and assigns forever, eighty (80) acres, more or less, in the Northeast Quarter of Section Twelve.</p>
+          <p>and will warrant and defend the same against all lawful claims whatsoever.</p>
+          <p class="deed__stamp">Received for record September 27, 1871, at 11 o'clock A.M. Recorded in Deed Record Vol. 31, Page 402. Recorder, Sample County.</p>
+        </div>
+        <p class="source__note">Entry 2 points to Deed Vol. 31, Pg. 402: the deed that carved the 80 acres out of the quarter section.</p>
+      </div>
+      <div class="source__card" data-entry="3">
+        <div class="deed">
+          <div class="deed__head"><span>DEED RECORD VOL. 98</span><span>215</span></div>
+          <p>being eighty (80) acres, more or less, in the Northeast Quarter of Section Twelve;</p>
+          <p class="deed__clause">EXCEPTING AND RESERVING unto the Grantor, his heirs and assigns, an undivided one-half (1/2) of all the oil and gas in and under said premises.</p>
+          <p>TO HAVE AND TO HOLD said premises unto the said Grantee, his heirs and assigns forever.</p>
+          <p class="deed__stamp">Received for record May 14, 1921, at 10:20 A.M. Recorded in Deed Record Vol. 98, Page 215. Recorder, Sample County.</p>
+        </div>
+        <p class="source__note">Entry 3 points to Deed Vol. 98, Pg. 215. Open it and you are reading the 1921 deed itself.</p>
+      </div>
+      <div class="source__card" data-entry="4" hidden>
+        <div class="deed">
+          <div class="deed__head"><span>DEED RECORD VOL. 112</span><span>66</span></div>
+          <p>CERTIFICATE OF TRANSFER. Probate Court, Sample County. Estate of Jacob Harper, deceased.</p>
+          <p class="deed__clause">The undivided one-half (1/2) interest in the oil and gas reserved in Deed Record Vol. 98, Page 215, passed by inheritance to Ruth Harper Keller and Thomas J. Harper, in equal shares.</p>
+          <p>Witness my signature and the seal of said Court, February 3, 1931.</p>
+          <p class="deed__stamp">Received for record February 10, 1931, at 2:05 P.M. Recorded in Deed Record Vol. 112, Page 66. Recorder, Sample County.</p>
+        </div>
+        <p class="source__note">Entry 4 points to Deed Vol. 112, Pg. 66: the certificate that passed the reserved half to two heirs.</p>
+      </div>
+      <div class="source__card" data-entry="5" hidden>
+        <div class="deed">
+          <div class="deed__head"><span>LEASE RECORD VOL. 22</span><span>310</span></div>
+          <p>OIL AND GAS LEASE, made August 16, 1951, by Samuel T. Dawson and wife, Lessors, to Sample Oil Company, Lessee.</p>
+          <p class="deed__clause">This lease shall remain in force for a term of ten (10) years from this date, and as long thereafter as oil or gas is produced from said land by the Lessee.</p>
+          <p>Said land being eighty (80) acres, more or less, in the Northeast Quarter of Section Twelve.</p>
+          <p class="deed__stamp">Received for record September 4, 1951, at 1:15 P.M. Recorded in Lease Record Vol. 22, Page 310. Recorder, Sample County.</p>
+        </div>
+        <p class="source__note">Entry 5 points to Lease Vol. 22, Pg. 310: the 1951 lease and its ten-year primary term.</p>
+      </div>
+      <div class="source__card" data-entry="6" hidden>
+        <div class="deed">
+          <div class="deed__head"><span>LEASE RECORD VOL. 39</span><span>12</span></div>
+          <p>RELEASE OF OIL AND GAS LEASE. Sample Oil Company, Lessee, for value received,</p>
+          <p class="deed__clause">does hereby release, surrender and cancel the oil and gas lease dated August 16, 1951, recorded in Lease Record Vol. 22, Page 310.</p>
+          <p>In witness whereof, Sample Oil Company has signed this release October 5, 1962.</p>
+          <p class="deed__stamp">Received for record October 22, 1962, at 3:30 P.M. Recorded in Lease Record Vol. 39, Page 12. Recorder, Sample County.</p>
+        </div>
+        <p class="source__note">Entry 6 points to Lease Vol. 39, Pg. 12: the release that clears the 1951 lease from the record.</p>
+      </div>
+      <div class="source__card" data-entry="7" hidden>
+        <div class="deed">
+          <div class="deed__head"><span>DEED RECORD VOL. 187</span><span>77</span></div>
+          <p>being the same premises conveyed to the Grantors by deed recorded in Deed Record Vol. 98, Page 215;</p>
+          <p class="deed__clause">SUBJECT TO the exception and reservation of one-half (1/2) of the oil and gas contained in said deed.</p>
+          <p>TO HAVE AND TO HOLD said premises unto the said Grantees, their heirs and assigns forever.</p>
+          <p class="deed__stamp">Received for record June 2, 1966, at 9:40 A.M. Recorded in Deed Record Vol. 187, Page 77. Recorder, Sample County.</p>
+        </div>
+        <p class="source__note">Entry 7 points to Deed Vol. 187, Pg. 77: the 1966 deed, which carries the reservation forward.</p>
+      </div>
+      <div class="source__card" data-entry="8" hidden>
+        <div class="deed">
+          <div class="deed__head"><span>MORTGAGE RECORD VOL. 74</span><span>141</span></div>
+          <p>MORTGAGE. Harlan E. Whitfield and wife, the Mortgagors, to secure payment of their promissory note of even date, grant with mortgage covenants to Sample County Savings Bank the premises conveyed to them this day.</p>
+          <p class="deed__clause">Margin: Satisfied and released of record, March 14, 1986. See Mortgage Record Vol. 131, Page 9.</p>
+          <p class="deed__stamp">Received for record June 2, 1966, at 9:45 A.M. Recorded in Mortgage Record Vol. 74, Page 141. Recorder, Sample County.</p>
+        </div>
+        <p class="source__note">Entry 8 points to Mortgage Vol. 74, Pg. 141: the 1966 mortgage, with its release noted in the margin.</p>
+      </div>
+      <div class="source__card" data-entry="9" hidden>
+        <div class="deed">
+          <div class="deed__head"><span>OFFICIAL RECORD VOL. 412</span><span>1184</span></div>
+          <p>Mary L. Whitfield, widow and surviving spouse of Harlan E. Whitfield, deceased, the Grantor, for valuable consideration paid,</p>
+          <p class="deed__clause">grants, with general warranty covenants, to Miller Ridge Farms LLC, the Grantee, eighty (80) acres, more or less, in the Northeast Quarter of Section Twelve.</p>
+          <p>Prior instrument reference: Deed Record Vol. 187, Page 77.</p>
+          <p class="deed__stamp">Received for record July 15, 2009, at 10:02 A.M. Recorded in Official Record Vol. 412, Page 1184. Recorder, Sample County.</p>
+        </div>
+        <p class="source__note">Entry 9 points to Official Record Vol. 412, Pg. 1184: the 2009 deed into the current owner of record.</p>
+      </div>
+    </div></div></aside>
+  </div></div>
+  <p class="proof__hint" hidden>Select any entry to open the recorded instrument behind it. <button type="button" class="link" data-view="0" hidden>View the sheet full size</button></p>
 </div></section>
 
-<section id="about" class="rule"><div class="wrap co">
-  <p class="eyebrow">Company</p>
-  <h2>Built by a professional, for professionals.</h2>
-  <div class="co-cols">
-    <p class="lead">Jones Technologies was founded by Dean Jones, a professional landman who spent 15 years abstracting title the traditional way. JTI exists to do the searching, so experienced professionals can do the judging.</p>
-    <p class="lead">We partner with oil &amp; gas brokerages, real estate companies and title insurance firms to turn days of courthouse research into hours, with every result traceable and every abstract reviewed.</p>
+<!-- The package: three sample pages. Each opens full size in the viewer. -->
+<section class="sec" id="package"><div class="wrap">
+  <div class="row row--rule">
+    <p class="label">The package</p>
+    <div>
+      <h2>The full abstract, ready for examination.</h2>
+      <p class="lede">The same research produces the rest of the package. Each document draws on the same recorded instruments as the run sheet.</p>
+    </div>
+  </div>
+
+  <div class="pages">
+    <figure class="fig">
+      <div class="fit"><div class="doc doc--page">
+        <div class="doc__top"><div class="doc__brand"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>Jones Technologies, Inc.</div><span class="doc__tag">Sample data</span></div>
+        <p class="doc__title">Ownership Report</p>
+        <p class="doc__meta">Sample Parcel, Sample County. 80.00 acres. Effective 10/30/2026.</p>
+        <p class="doc__sub">Surface</p>
+        <table class="doc__table">
+          <colgroup><col style="width:36%"><col style="width:32%"><col style="width:32%"></colgroup>
+          <thead><tr><th scope="col">Owner</th><th scope="col">Interest</th><th scope="col">Source</th></tr></thead>
+          <tbody><tr><td>Miller Ridge Farms LLC</td><td>1.000000</td><td>OR 412, Pg. 1184</td></tr></tbody>
+        </table>
+        <p class="doc__sub">Oil and gas</p>
+        <table class="doc__table">
+          <colgroup><col style="width:36%"><col style="width:17%"><col style="width:15%"><col style="width:32%"></colgroup>
+          <thead><tr><th scope="col">Owner</th><th scope="col">Interest</th><th scope="col">Net acres</th><th scope="col">Source</th></tr></thead>
+          <tbody>
+            <tr><td>Miller Ridge Farms LLC</td><td>0.500000</td><td>40.00</td><td>OR 412, Pg. 1184</td></tr>
+            <tr><td>Ruth Harper Keller</td><td>0.250000</td><td>20.00</td><td>DV 112, Pg. 66</td></tr>
+            <tr><td>Thomas J. Harper</td><td>0.250000</td><td>20.00</td><td>DV 112, Pg. 66</td></tr>
+            <tr class="total"><td>Total</td><td>1.000000</td><td>80.00</td><td></td></tr>
+          </tbody>
+        </table>
+        <p class="doc__sub">Leasehold</p>
+        <p class="doc__text">No oil and gas lease of record in force. The 1951 lease (LV 22, Pg. 310) was released in 1962 (LV 39, Pg. 12).</p>
+        <p class="doc__sub">Notes for the examiner</p>
+        <p class="doc__text">1. No conveyance or estate of record for Ruth Harper Keller or Thomas J. Harper after 1931. Heirship to be determined.</p>
+        <p class="doc__text">2. Mortgage at MV 74, Pg. 141 is released of record (MV 131, Pg. 9).</p>
+        <div class="doc__foot"><span>Examined by J. Sample, 11/02/2026</span><span>Page 1 of 1</span></div>
+      </div></div>
+      <figcaption><span class="fig__name">Ownership report</span><span class="fig__line">Surface, minerals and leasehold, with the open questions flagged.</span><button type="button" class="link fig__view" data-view="1" hidden>View full size</button></figcaption>
+    </figure>
+
+    <figure class="fig">
+      <div class="fit"><div class="doc doc--page">
+        <div class="doc__top"><div class="doc__brand"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>Jones Technologies, Inc.</div><span class="doc__tag">Sample data</span></div>
+        <p class="doc__title">Chain of Title Flowchart</p>
+        <p class="doc__meta">Sample Parcel, Sample County. Patent to present.</p>
+        <div class="flow">
+          <div class="flow__box"><b>United States of America</b></div>
+          <div class="flow__link"><span>Patent, 1838 · Pat. 2, Pg. 114</span></div>
+          <div class="flow__box"><b>Elias Harper</b><span>NE¼ Section 12, 160.00 acres</span></div>
+          <div class="flow__link"><span>Warranty Deed, 1871 · DV 31, Pg. 402</span></div>
+          <div class="flow__box"><b>Jacob Harper</b><span>80.00 acres</span></div>
+          <div class="flow__link"><span>Warranty Deed, 1921 · DV 98, Pg. 215</span></div>
+          <div class="flow__bar"></div>
+          <div class="flow__split">
+            <div class="flow__col">
+              <p class="flow__branch">Surface and ½ oil and gas</p>
+              <div class="flow__box"><b>Samuel T. Dawson</b></div>
+              <div class="flow__link"><span>WD, 1966 · DV 187, Pg. 77</span></div>
+              <div class="flow__box"><b>Harlan E. Whitfield and wife</b></div>
+              <div class="flow__link"><span>WD, 2009 · OR 412, Pg. 1184</span></div>
+              <div class="flow__box flow__box--now"><b>Miller Ridge Farms LLC</b><span>Surface 100%, oil and gas ½</span></div>
+            </div>
+            <div class="flow__col">
+              <p class="flow__branch">Reserved ½ oil and gas</p>
+              <div class="flow__box"><b>Jacob Harper</b><span>by reservation</span></div>
+              <div class="flow__link"><span>Estate, 1931 · DV 112, Pg. 66</span></div>
+              <div class="flow__bar"></div>
+              <div class="flow__split flow__split--pair">
+                <div class="flow__col"><div class="flow__box flow__box--now"><b>Ruth Harper Keller</b><span>¼</span></div></div>
+                <div class="flow__col"><div class="flow__box flow__box--now"><b>Thomas J. Harper</b><span>¼</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="doc__foot"><span>Shaded boxes are current owners of record</span><span>Page 1 of 1</span></div>
+      </div></div>
+      <figcaption><span class="fig__name">Flowchart</span><span class="fig__line">The chain from patent to present, including the severance.</span><button type="button" class="link fig__view" data-view="2" hidden>View full size</button></figcaption>
+    </figure>
+
+    <figure class="fig">
+      <div class="fit"><div class="doc doc--page">
+        <div class="doc__top"><div class="doc__brand"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>Jones Technologies, Inc.</div><span class="doc__tag">Sample data</span></div>
+        <p class="doc__title">Deed Plot</p>
+        <p class="doc__meta">Sample Parcel. Description from DV 98, Pg. 215.</p>
+        <svg class="plot" viewBox="0 0 336 209" role="img" aria-label="Plot of the sample tract drawn from its five deed calls">
+          <polygon class="plot__tract" points="20.2,173.1 318.0,169.8 314.9,74.2 265.2,22.0 18.0,25.0"/>
+          <circle class="plot__corner" cx="318.0" cy="169.8" r="1.5"/>
+          <circle class="plot__corner" cx="314.9" cy="74.2" r="1.5"/>
+          <circle class="plot__corner" cx="265.2" cy="22.0" r="1.5"/>
+          <circle class="plot__corner" cx="18.0" cy="25.0" r="1.5"/>
+          <circle class="plot__pob" cx="20.2" cy="173.1" r="2.6"/>
+          <text class="strong" x="26.2" y="168.1">P.O.B.</text>
+          <circle class="plot__tag" cx="166.9" cy="181.2" r="5.2"/><text class="mid strong" x="166.9" y="183.8">1</text>
+          <circle class="plot__tag" cx="326.2" cy="124.2" r="5.2"/><text class="mid strong" x="326.2" y="126.8">2</text>
+          <circle class="plot__tag" cx="299.2" cy="44.1" r="5.2"/><text class="mid strong" x="299.2" y="46.7">3</text>
+          <circle class="plot__tag" cx="136.1" cy="15.2" r="5.2"/><text class="mid strong" x="136.1" y="17.8">4</text>
+          <circle class="plot__tag" cx="9.1" cy="99.4" r="5.2"/><text class="mid strong" x="9.1" y="102.0">5</text>
+          <text class="mid acres" x="170.2" y="99.6">80.00 acres</text>
+          <line x1="18" y1="201.1" x2="73.3" y2="201.1"/>
+          <line x1="18" y1="198.1" x2="18" y2="204.1"/>
+          <line x1="73.3" y1="198.1" x2="73.3" y2="204.1"/>
+          <text x="78.3" y="203.3">500 ft</text>
+          <line x1="326" y1="204.1" x2="326" y2="182.1"/>
+          <path class="plot__north" d="M326 178.1l-3.2 7h6.4z"/>
+          <text class="mid strong" x="326" y="175.1">N</text>
+        </svg>
+        <table class="doc__table doc__table--calls">
+          <colgroup><col style="width:22%"><col style="width:40%"><col style="width:38%"></colgroup>
+          <thead><tr><th scope="col">Course</th><th scope="col">Bearing</th><th scope="col">Distance</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>N 89°21′ E</td><td>2,690.61 ft</td></tr>
+            <tr><td>2</td><td>N 01°53′ W</td><td>863.44 ft</td></tr>
+            <tr><td>3</td><td>N 43°33′ W</td><td>651.34 ft</td></tr>
+            <tr><td>4</td><td>S 89°18′ W</td><td>2,233.74 ft</td></tr>
+            <tr><td>5</td><td>S 00°52′ E</td><td>1,338.27 ft</td></tr>
+          </tbody>
+        </table>
+        <p class="doc__text">Area by calls 80.00 acres. Closure 0.17 ft in 7,777.40 ft (1:46,246).</p>
+        <div class="doc__foot"><span>Examined by J. Sample, 11/02/2026</span><span>Page 1 of 1</span></div>
+      </div></div>
+      <figcaption><span class="fig__name">Deed plot</span><span class="fig__line">The legal description drawn from its calls, with closure and area.</span><button type="button" class="link fig__view" data-view="3" hidden>View full size</button></figcaption>
+    </figure>
+  </div>
+
+  <div class="row row--also">
+    <p class="label">Also in the package</p>
+    <div>
+      <p class="lede">The chain of title, tax records, mapping, and copies of the recorded instruments themselves.</p>
+      <a class="link sample" href="assets/jti-sample-pages.pdf" download>Download the sample pages (PDF)</a>
+    </div>
   </div>
 </div></section>
 
-<section class="ambition"><div class="wrap">
-  <p class="eyebrow">Our ambition</p>
-  <p class="big"><span>7 days</span><em>→</em><span>7 hours</span></p>
-  <p class="lead">The same thorough abstract, in a fraction of the time.</p>
+<!-- How it works -->
+<section class="sec" id="how"><div class="wrap">
+  <div class="row row--rule">
+    <p class="label">How it works</p>
+    <div>
+      <h2>The software does the searching.<br>An examiner does the judging.</h2>
+      <div class="ledgers">
+        <div class="ledger">
+          <h3>The software</h3>
+          <ul>
+            <li>Pulls the county records</li>
+            <li>Builds the chain of title</li>
+            <li>Prepares the run sheet, reports, maps and plots</li>
+            <li>Cites the recorded instrument for each entry</li>
+          </ul>
+        </div>
+        <div class="ledger">
+          <h3>The examiner</h3>
+          <ul>
+            <li>Reviews the chain against the instruments</li>
+            <li>Applies professional judgment where the record is unclear</li>
+            <li>Signs off before the work is delivered</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div></section>
 
-<section class="v3cta" id="demo"><div class="wrap">
-  <h2>See it on a real parcel.</h2>
-  <p class="lead">A thirty-minute walkthrough, start to finish.</p>
-  <a class="btn solid" href="https://calendly.com/dean-jonestechnologiesinc/30min" target="_blank" rel="noopener noreferrer">Request a demo</a>
+<!-- Company -->
+<section class="sec" id="company"><div class="wrap">
+  <div class="row row--rule">
+    <p class="label">Company</p>
+    <div>
+      <h2>Built by a working landman.</h2>
+      <p class="lede">Jones Technologies was founded by Dean Jones, a landman with more than fifteen years of abstracting title the traditional way.</p>
+      <p class="lede">We partner with oil and gas brokerages, real estate companies and title insurance firms. Every abstract is traceable to the record and reviewed before it reaches you.</p>
+      <p class="signature">Dean Jones</p>
+      <p class="signature__title">Founder and CEO, Jones Technologies, Inc.</p>
+    </div>
+  </div>
 </div></section>
 
-<footer><div class="wrap"><span>Jones Technologies, Inc. · Dean Jones, Founder &amp; CEO</span><a href="mailto:dean@jonestechnologiesinc.com">dean@jonestechnologiesinc.com</a></div></footer>
+<!-- Our ambition -->
+<section class="band" id="ambition" aria-label="Our ambition"><div class="wrap">
+  <div class="row">
+    <p class="label">Our ambition</p>
+    <div>
+      <p class="band__figure"><span>7 days</span><svg class="band__arrow" viewBox="0 0 80 24" role="img" aria-label="to"><path d="M0 12h77M67 2l10 10-10 10"/></svg><span>7 hours</span></p>
+      <p class="band__text">The abstract that takes a week today, delivered in a working day, with the same examination behind it. That is what we are building toward.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- Closing -->
+<section class="close" id="demo">
+  <img class="close__photo" src="assets/summit.jpg" alt="" width="1672" height="941" loading="lazy">
+  <div class="wrap close__in">
+    <h2>See it on a real parcel.</h2>
+    <p class="close__line">A thirty-minute walkthrough, start to finish.</p>
+    <div class="close__actions">
+      <a class="btn" href="https://calendly.com/dean-jonestechnologiesinc/30min" target="_blank" rel="noopener noreferrer">Request a Demo</a>
+      <a class="close__mail" href="mailto:dean@jonestechnologiesinc.com"><span>dean@jonestechnologiesinc.com</span></a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><div class="foot">
+  <p class="foot__brand"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>Jones Technologies, Inc.</p>
+  <p>Sample documents on this page use illustrative data, not a real parcel.</p>
+  <p class="foot__legal">© 2026 Jones Technologies, Inc.</p>
+</div></div></footer>
+
+<!-- Document viewer. Empty until site.js opens a sample document in it. -->
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-title" hidden>
+  <div class="viewer__bar">
+    <div class="viewer__what"><p class="viewer__title" id="viewer-title">Run sheet</p><span class="viewer__tag">Sample data</span></div>
+    <div class="viewer__pager">
+      <p class="viewer__hint">Pinch to zoom. Drag to move.</p>
+      <div class="viewer__steps">
+        <button type="button" class="viewer__btn" data-step="-1" aria-label="Previous document"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
+        <span class="viewer__count" aria-live="polite">1 of 4</span>
+        <button type="button" class="viewer__btn" data-step="1" aria-label="Next document"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></button>
+      </div>
+    </div>
+    <div class="viewer__tools">
+      <a class="viewer__pdf" href="assets/jti-sample-pages.pdf" download><span>Download PDF</span></a>
+      <button type="button" class="viewer__btn viewer__close" aria-label="Close the viewer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9"/></svg></button>
+    </div>
+  </div>
+  <div class="viewer__stage" tabindex="0"><div class="viewer__doc fit"></div></div>
+</div>
 </main>
-<script>
-const entrance=document.getElementById('entrance');
-const landing=document.getElementById('discover');
-const enterButton=document.querySelector('.enter');
-let opening=false;
-history.scrollRestoration='manual';
-function showLanding(visible){
- entrance.hidden=visible;
- landing.hidden=!visible;
- document.body.classList.toggle('entered',visible);
- document.documentElement.classList.toggle('entrance-locked',!visible);
- window.scrollTo({top:0,behavior:'instant'});
-}
-function enter(){
- if(opening)return;opening=true;
- const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
- const curtain=document.createElement('div');curtain.className='split-curtain';curtain.setAttribute('aria-hidden','true');
- curtain.innerHTML='<div class="split-half split-left"></div><div class="split-half split-right"></div>';
- if(!reduced)document.body.append(curtain);
- showLanding(true);
- history.replaceState(null,'','#discover');landing.focus({preventScroll:true});
- if(!reduced)requestAnimationFrame(()=>requestAnimationFrame(()=>curtain.classList.add('opening')));
- setTimeout(()=>{curtain.remove();opening=false;},reduced?0:1000);
-}
-enterButton.addEventListener('click',enter);
-document.querySelectorAll('a[href="#entrance"]').forEach(a=>a.addEventListener('click',e=>{
- e.preventDefault();if(opening)return;
- showLanding(false);history.replaceState(null,'','#entrance');enterButton.focus({preventScroll:true});
-}));
-window.addEventListener('pageshow',()=>{
- if(!document.body.classList.contains('entered'))showLanding(false);
-});
-</script></body></html>
+<script src="site.js"></script>
+</body>
+</html>
