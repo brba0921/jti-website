@@ -1207,3 +1207,4 @@ html { scroll-behavior: smooth; }
 #discover .proof__sheet .sheet__table col:nth-child(6) { width: 23% !important; }
 #discover .proof__sheet .sheet__table td:nth-child(6), #discover .proof__sheet .sheet__table .cite { white-space: nowrap; font-size: .95em; }
 #discover .proof__sheet .doc--sheet .doc__foot span:last-child { white-space: nowrap; }
+#discover .close__actions { column-gap: 44px; }
