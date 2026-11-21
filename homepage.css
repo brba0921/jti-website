@@ -1114,3 +1114,8 @@ html { scroll-behavior: smooth; }
 #discover .hero__delivers { margin-top: auto; }
 
 #discover .delivers li { padding-top: 16px; font-size: clamp(16px, 1.25vw, 20px); }
+@media (min-width: 1024px) {
+  #discover .delivers { display: flex; justify-content: space-between; }
+  #discover .delivers li { flex: 0 1 auto; white-space: nowrap; padding-right: 0; font-size: clamp(15px, 1.2vw, 20px); }
+  #discover .delivers li + li { padding-left: clamp(14px, 1.6vw, 28px); }
+}
