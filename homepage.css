@@ -195,3 +195,8 @@
 }
 @media (max-width: 900px) { #discover.v2 .m-hero::before { background: linear-gradient(180deg, rgba(2,23,42,.86) 0%, rgba(2,23,42,.8) 55%, rgba(2,23,42,.25) 80%, rgba(2,23,42,0) 100%); } #discover.v2 .m-copy { position: relative; z-index: 1; } }
 #discover.v2 .m-copy { top: calc(52 * var(--u)); } @media (max-width: 900px) { #discover.v2 .m-copy { top: auto; } }
+/* strip stays navy: no bright white band */
+#discover.v2 .m-strip { background: linear-gradient(180deg, #0A1C32 0%, #071A2E 100%); color: #fff; border-top: 1px solid rgba(249,207,90,.35); border-bottom: 1px solid rgba(249,207,90,.18); }
+#discover.v2 .m-label { color: #F9CF5A; }
+#discover.v2 .m-items div { color: #EEF2F7; border-left-color: rgba(249,207,90,.35); }
+#discover.v2 .m-items svg { color: #F9CF5A; }
