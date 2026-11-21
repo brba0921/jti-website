@@ -1165,3 +1165,16 @@ html { scroll-behavior: smooth; }
 }
 #discover .pages--large .deliv__text { padding-top: 24px; }
 @media (max-width: 1149px) { #discover .pages--large { margin-inline: 0; grid-template-columns: minmax(0, 1fr); row-gap: 16px; } #discover .pages--large .deliv__text { padding-top: 0; } }
+
+/* Matched type size: every document's text renders at the same size; everything aligns to the page column */
+#discover .proof, #discover .pages--large { margin-inline: 0 !important; }
+#discover .proof__grid { grid-template-columns: minmax(0, 1fr) !important; row-gap: 24px; }
+#discover .proof.is-live .source { transform: none !important; margin-top: 0 !important; }
+#discover .source { max-width: 620px; margin-top: 0; }
+#discover .source::before { display: none; }
+#discover .source__scale { font-size: 12px; }
+@media (min-width: 1150px) {
+  #discover .pages--large { grid-template-columns: minmax(0, 515px) minmax(0, 1fr); column-gap: 56px; align-items: start; }
+  #discover .pages--large .deliv__text { padding-top: 24px; max-width: 440px; }
+}
+#discover .proof__sheet .sheet__table { font-size: .9em; }
