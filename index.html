@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="has-intro" data-intro="once">
+<html lang="en" class="has-intro" data-intro="always">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,19 +23,13 @@
 <link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="homepage.css">
 <script>
-/* Decide before the first paint whether the entrance plays.
-   It is skipped when the address points into the page (a link to #work, say).
-   data-intro on <html>: "always" plays it on every load; "once" plays it once per visit. */
 (function (r) {
   r.classList.add('js');
-  var skip = !!location.hash && location.hash !== '#entrance';
-  if (!skip && r.getAttribute('data-intro') === 'once') {
-    try { skip = !!sessionStorage.getItem('jti-entered'); sessionStorage.setItem('jti-entered', '1'); } catch (e) {}
-  }
-  if (skip) { r.classList.remove('has-intro', 'has-gate'); return; }
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (location.hash) { try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {} }
+  window.scrollTo(0, 0);
   if (r.classList.contains('has-intro')) {
-    r.classList.add('intro-wait');   /* released by site.js once the photograph is in */
+    r.classList.add('intro-wait');
     setTimeout(function () { r.classList.remove('intro-wait'); }, 1500);
   }
 })(document.documentElement);
@@ -662,5 +656,6 @@
 </main>
 <script src="site.js"></script>
 <script data-goatcounter="https://jti.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>window.addEventListener("pageshow",function(e){if(e.persisted){location.reload();}});</script>
 </body>
 </html>
