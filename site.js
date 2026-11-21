@@ -2,10 +2,10 @@
    Plain JavaScript, no libraries. Four parts, each on its own:
      1. Navigation    pins once the top of the hero has scrolled away
      2. Entrance      opens by itself, or on a click, then gets out of the way
-     3. Run sheet     any entry opens the recorded instrument behind it
+     3. Runsheet     any entry opens the recorded instrument behind it
      4. Viewer        opens a sample document full size
    With JavaScript off the page still reads top to bottom: the entrance clears
-   itself, entry 3 stays open beside the run sheet, and phones get the sheet. */
+   itself, entry 3 stays open beside the runsheet, and phones get the sheet. */
 (function () {
   'use strict';
 
@@ -120,7 +120,7 @@
     }
   })();
 
-  /* 3. Run sheet ----------------------------------------------------------- */
+  /* 3. Runsheet ----------------------------------------------------------- */
   (function () {
     var proof = one('.proof');
     if (!proof) return;
@@ -270,7 +270,7 @@
     /* The documents, in the order they appear on the page. */
     var docs = [];
     var sheet = one('.proof .doc--sheet');
-    if (sheet) docs.push({ el: sheet, title: 'Run sheet', kind: 'sheet' });
+    if (sheet) docs.push({ el: sheet, title: 'Runsheet', kind: 'sheet' });
     all('.pages .fig').forEach(function (fig) {
       var doc = fig.querySelector('.doc'), name = fig.querySelector('.fig__name');
       if (doc) docs.push({ el: doc, title: name ? name.textContent.trim() : 'Document', kind: 'page' });
