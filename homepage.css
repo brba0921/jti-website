@@ -1126,3 +1126,31 @@ html { scroll-behavior: smooth; }
 #discover .hero__line { color: #FFFFFF; }
 #discover .foot__place a { color: inherit; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; }
 #discover .foot__place a:hover { color: var(--gold); }
+
+/* Sample-accuracy pass (11-21) ------------------------------------------- */
+/* Flowchart: heirs last shown of record in 1931, successors undetermined */
+#discover .flow__box--open { border-style: dashed; background: #fff; }
+/* Enlarged viewer: real reading size (~15px), wide sheet pans */
+#discover .viewer__doc { container-type: inline-size; }
+#discover .viewer { --doc-w: min(100%, clamp(600px, calc((100vh - 140px) * .7727), 760px)); }
+#discover .viewer[data-kind="sheet"] { --doc-w: 1340px; }
+@media (max-width: 767px) {
+  #discover .viewer { --doc-w: 600px; }
+  #discover .viewer[data-kind="sheet"] { --doc-w: 1340px; }
+}
+/* Instrument pane under the enlarged runsheet */
+#discover .viewer__instrument { margin: 24px auto 8px; max-width: 760px; color: var(--white); }
+#discover .viewer__instrument-hint { margin: 0; color: var(--mist); font-size: 15px; }
+#discover .viewer__instrument-label { margin: 0 0 10px; font-size: 15px; font-weight: 600; }
+#discover .viewer__instrument .deed { font-size: 15px; color: #2A2F36; }
+#discover .viewer__instrument .source__note { margin-top: 10px; color: var(--mist); font-size: 15px; line-height: 1.5; }
+#discover .viewer__doc .cite { font: inherit; cursor: pointer; }
+/* Phone: backing behind the initial nav so white links stay readable over the bright peak */
+@media (max-width: 767px) {
+  #discover .nav:not(.is-stuck) { background: rgba(8, 24, 43, .45); }
+}
+/* Flowchart fits one page with the survivorship step */
+#discover .flow { margin-top: .9em; font-size: .9em; }
+#discover .flow__box { padding: .32em .6em; }
+#discover .flow__link::before, #discover .flow__link::after { height: .42em; }
+#discover .flow__link span { padding: .06em 0; }

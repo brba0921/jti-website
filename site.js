@@ -286,10 +286,33 @@
       /* A clean copy: no highlight, no buttons, nothing that answers a click. */
       copy.classList.remove('doc--stack');
       all('.is-cited', copy).forEach(function (el) { el.classList.remove('is-cited'); });
-      all('.cite', copy).forEach(function (button) { button.replaceWith(document.createTextNode(button.textContent)); });
+      /* The citations stay live in the enlarged runsheet: each opens its recorded instrument below the sheet. */
+      var cites = all('.cite', copy);
+      cites.forEach(function (button) { button.removeAttribute('aria-controls'); button.setAttribute('aria-pressed', 'false'); });
       all('[id]', copy).forEach(function (el) { el.removeAttribute('id'); });
       holder.textContent = '';
       holder.appendChild(copy);
+      if (doc.kind === 'sheet') {
+        var pane = document.createElement('div');
+        pane.className = 'viewer__instrument';
+        pane.setAttribute('aria-live', 'polite');
+        pane.innerHTML = '<p class="viewer__instrument-hint">Select any book and page to read the recorded instrument (excerpt).</p>';
+        holder.appendChild(pane);
+        cites.forEach(function (button) {
+          button.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var tr = button.closest('tr'), n = tr ? tr.getAttribute('data-entry') : null;
+            var card = n && main.querySelector('.source__card[data-entry="' + n + '"]');
+            if (!card) return;
+            cites.forEach(function (b) { b.setAttribute('aria-pressed', b === button ? 'true' : 'false'); var r = b.closest('tr'); if (r) r.classList.toggle('is-cited', b === button); });
+            var c = card.cloneNode(true); c.hidden = false; c.removeAttribute('id');
+            pane.textContent = '';
+            var head = document.createElement('p'); head.className = 'viewer__instrument-label'; head.textContent = 'Entry ' + n + ': the recorded instrument (excerpt)';
+            pane.appendChild(head); pane.appendChild(c);
+            pane.scrollIntoView({ block: 'nearest', behavior: reduced ? 'auto' : 'smooth' });
+          });
+        });
+      }
       viewer.setAttribute('data-kind', doc.kind);
       title.textContent = doc.title;
       count.textContent = (index + 1) + ' of ' + docs.length;
@@ -326,8 +349,7 @@
     document.addEventListener('keydown', function (e) {
       if (!isOpen) return;
       if (e.key === 'Escape') { e.preventDefault(); close(); }
-      else if (e.key === 'ArrowLeft') show(index - 1);
-      else if (e.key === 'ArrowRight') show(index + 1);
+      /* Left and Right Arrow are left to scroll the document; Previous and Next change it. */
     });
     closeButton.addEventListener('click', function () { close(); });
     stage.addEventListener('click', function (e) { if (e.target === stage) close(); });   /* a click beside the page */
