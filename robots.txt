@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jonestechnologiesinc.com/sitemap.xml
