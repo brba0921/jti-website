@@ -13,7 +13,7 @@
 }
 #discover.v2 * { box-sizing: border-box; }
 #discover.v2 a { color: inherit; }
-#discover.v2 .m-in { width: min(100vw, 1672px); margin: 0 auto; position: relative; }
+#discover.v2 .m-in { width: 100%; max-width: 1672px; margin: 0 auto; position: relative; }
 #discover.v2 a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
 /* nav: mockup y 0-82 */
@@ -62,7 +62,7 @@
 #discover.v2 .m-amb-big { margin: 0; font: italic 400 calc(68 * var(--u))/1 var(--serif); color: #fdfdfe; white-space: nowrap; }
 #discover.v2 .m-amb-big span { color: var(--gold); font-style: normal; padding: 0 calc(14 * var(--u)); }
 #discover.v2 .m-amb-tag { margin: 0; padding-left: calc(44 * var(--u)); border-left: 2px solid var(--qrule); font: 500 calc(15 * var(--u))/1.6 var(--sans); letter-spacing: .13em; text-transform: uppercase; color: #e8ecf2; white-space: nowrap; }
-#discover.v2 .m-quote { width: min(100vw, 1672px); margin: 0 auto; padding: calc(10 * var(--u)) calc(150 * var(--u)) calc(40 * var(--u)); display: flex; align-items: center; gap: calc(28 * var(--u)); font: italic 400 calc(25 * var(--u))/1.3 var(--serif); color: #fdfdfe; text-align: center; white-space: nowrap; }
+#discover.v2 .m-quote { width: 100%; max-width: 1672px; margin: 0 auto; padding: calc(10 * var(--u)) calc(150 * var(--u)) calc(40 * var(--u)); display: flex; align-items: center; gap: calc(28 * var(--u)); font: italic 400 calc(25 * var(--u))/1.3 var(--serif); color: #fdfdfe; text-align: center; white-space: nowrap; }
 #discover.v2 .m-quote::before, #discover.v2 .m-quote::after { content: ""; flex: 1; min-width: calc(60 * var(--u)); height: 2px; background: var(--qrule); }
 #discover.v2 .m-foot { background: var(--deep); border-top: 1px solid rgba(242,197,100,.25); color: #aebdc5; }
 #discover.v2 .m-foot .m-in { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px; padding: 22px max(16px, calc(95 * var(--u))); font-size: 14px; }
@@ -96,3 +96,4 @@
 
 @media (max-width: 900px) { #discover.v2 .m-amb-label, #discover.v2 .m-amb-tag { white-space: normal; } }
 @media (max-width: 900px) { #discover.v2 .m-quote { white-space: normal; } }
+#discover.v2 .m-foot .m-btn { height: auto; padding: 12px 20px; font-size: 15px; width: auto; }
