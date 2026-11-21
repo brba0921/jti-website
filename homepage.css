@@ -1146,3 +1146,22 @@ html { scroll-behavior: smooth; }
 #discover .pkgrow { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 340px); column-gap: 48px; align-items: start; }
 #discover .pkgrow .pages--single { margin-top: 0; grid-template-columns: minmax(0, 1fr); }
 @media (max-width: 900px) { #discover .pkgrow { grid-template-columns: minmax(0, 1fr); row-gap: 28px; } #discover .pkgrow .pages--single { max-width: 380px; } }
+#discover .pages--large { display: grid; grid-template-columns: minmax(0, 640px) minmax(0, 1fr); column-gap: 48px; align-items: end; margin-top: 28px; }
+#discover .pages--large .fig { min-width: 0; }
+#discover .deliv__text { padding-bottom: 8px; }
+#discover .deliv__text .lede { margin: 0 0 14px; }
+@media (max-width: 900px) { #discover .pages--large { grid-template-columns: minmax(0, 1fr); row-gap: 16px; } }
+#discover .pages .doc { cursor: zoom-in; transition: box-shadow .25s ease, transform .25s ease; }
+@media (hover: hover) {
+  #discover .pages .doc:hover { box-shadow: 0 0 0 1px rgba(184,137,43,.7), 0 18px 44px -14px rgba(226,183,94,.65); transform: translateY(-2px); }
+  #discover .proof.is-live .sheet__table tbody tr:hover { background: rgba(226,183,94,.14); }
+}
+@media (prefers-reduced-motion: reduce) { #discover .pages .doc { transition: none; } #discover .pages .doc:hover { transform: none; } }
+/* Every deliverable at the runsheet's width, text in the instrument-card column */
+#discover .pages--large {
+  --proof-w: min(1440px, calc(100vw - 2 * var(--pad) - 16px));
+  margin-inline: min(0px, calc((100% - var(--proof-w)) / 2));
+  grid-template-columns: minmax(0, 1fr) 340px; column-gap: 24px; align-items: start;
+}
+#discover .pages--large .deliv__text { padding-top: 24px; }
+@media (max-width: 1149px) { #discover .pages--large { margin-inline: 0; grid-template-columns: minmax(0, 1fr); row-gap: 16px; } #discover .pages--large .deliv__text { padding-top: 0; } }
