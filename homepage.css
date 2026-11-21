@@ -1090,3 +1090,18 @@ html { scroll-behavior: smooth; }
   background: none; color: var(--white);
   text-decoration-line: underline; text-decoration-color: var(--gold); text-decoration-thickness: 1px; text-underline-offset: 7px;
 }
+
+/* Borrowed from the GPT review (11-21) */
+#discover .xnote { margin: clamp(28px, 3vw, 44px) 0 0; max-width: 760px; padding: 20px 24px 20px 22px; border-left: 3px solid var(--gold); background: rgba(226,183,94,.10); }
+#discover .xnote__label { margin: 0 0 8px; font: 600 13px/1 "Libre Franklin", Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-600); }
+#discover .xnote__text { margin: 0; font: 400 clamp(19px, 1.4vw, 22px)/1.45 "Libre Caslon Text", Georgia, serif; color: var(--navy); }
+#discover .xnote__who { margin: 10px 0 0; font: italic 400 15px/1.4 "Libre Caslon Text", Georgia, serif; color: #5b6573; }
+#discover .close__county { margin-top: 10px; font-size: var(--fs-li); opacity: .82; }
+#discover .entry__top, #discover .viewer__tag { font-size: 14px; }
+#discover .proof__hint { font-size: 15px; }
+@media (max-width: 767px) {
+  #discover .nav__links a:not(.nav__demo) { display: inline-block; }
+  #discover .nav__links { gap: 18px; font-size: 14px; }
+}
+@media (max-width: 767px) { #discover .nav__links { gap: 14px; font-size: 13px; } #discover .mark { font-size: 26px; } }
+@media (max-width: 380px) { #discover .nav__links { gap: 10px; font-size: 12px; } }
