@@ -78,21 +78,21 @@
   <div class="wrap hero__delivers">
     <p class="hero__delivers-label">What JTI delivers</p>
     <ol class="delivers">
-      <li>Tax Records</li>
+      <li><a href="#d-tax">Tax Records</a></li>
       <li class="sep" aria-hidden="true"></li>
-      <li>Mapping</li>
+      <li><a href="#d-map">Mapping</a></li>
       <li class="sep" aria-hidden="true"></li>
-      <li>Chain of Title</li>
+      <li><a href="#d-chain">Chain of Title</a></li>
       <li class="sep" aria-hidden="true"></li>
-      <li>Runsheet</li>
+      <li><a href="#d-run">Runsheet</a></li>
       <li class="sep" aria-hidden="true"></li>
-      <li>Ownership Report</li>
+      <li><a href="#d-owner">Ownership Report</a></li>
       <li class="sep" aria-hidden="true"></li>
-      <li>Deed Plots</li>
+      <li><a href="#d-plots">Deed Plots</a></li>
       <li class="sep" aria-hidden="true"></li>
-      <li>Flowcharts</li>
+      <li><a href="#d-flow">Flowcharts</a></li>
       <li class="sep" aria-hidden="true"></li>
-      <li>Abstract Package</li>
+      <li><a href="#d-package">Abstract Package</a></li>
     </ol>
   </div>
 </div>
@@ -110,14 +110,95 @@
 
 <section class="sec" id="work"><div class="wrap">
   <div class="row row--rule">
-    <p class="label">The work product</p>
+    <p class="label">The product</p>
     <div>
-      <h2>Every entry cites the recorded instrument.</h2>
-      <p class="lede">JTI pulls the county records, builds the chain of title and prepares the runsheet. Each line carries the book and page of the instrument it came from, so anyone on your team can check any entry against the record.</p>
+      <h2>From tax records to the completed abstract.</h2>
+      <p class="lede">Eight deliverables, in the order JTI produces them. Each is built from the county record and cites the instrument it came from, so anyone on your team can check it against the record.</p>
     </div>
   </div>
 
-  <div class="proof"><p class="proof__hint" hidden>Select any entry to open the recorded instrument behind it. <button type="button" class="link" data-view="0" hidden>View the sheet full size</button></p>
+  <div class="pages">
+    <figure class="fig" id="d-tax">
+      <div class="fit"><div class="doc doc--page">
+        <div class="doc__top"><div class="doc__brand"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>Jones Technologies, Inc.</div><span class="doc__tag">Sample data</span></div>
+        <p class="doc__title">Tax Record</p>
+        <p class="doc__meta">Sample County Auditor. Parcel SP-12-0013-006. Tax year 2025, payable 2026.</p>
+        <p class="doc__sub">Owner of record</p>
+        <table class="doc__table"><colgroup><col style="width:38%"><col style="width:62%"></colgroup><tbody>
+          <tr><td>Owner</td><td>Miller Ridge Farms LLC</td></tr>
+          <tr><td>Legal description</td><td>NE¼, Sec. 12, T13N, R6W, 80.00 acres</td></tr>
+          <tr><td>Land use</td><td>Agricultural (current agricultural use value)</td></tr>
+          <tr><td>Last transfer</td><td>07/15/2009 · OR 412, Pg. 1184</td></tr>
+        </tbody></table>
+        <p class="doc__sub">Valuation</p>
+        <table class="doc__table"><colgroup><col style="width:38%"><col style="width:31%"><col style="width:31%"></colgroup>
+          <thead><tr><th scope="col"></th><th scope="col">Market</th><th scope="col">Assessed (35%)</th></tr></thead>
+          <tbody>
+            <tr><td>Land</td><td>480,000</td><td>168,000</td></tr>
+            <tr><td>Buildings</td><td>0</td><td>0</td></tr>
+            <tr><td>CAUV value</td><td>96,000</td><td>33,600</td></tr>
+          </tbody></table>
+        <p class="doc__sub">Status</p>
+        <p class="doc__text">Taxes paid in full through tax year 2025. No delinquency, special assessment or tax lien of record.</p>
+        <div class="doc__foot"><span>Examined by JTI. Reviewed by J. Sample, 11/02/2026</span><span>Page 1 of 1</span></div>
+      </div></div>
+      <figcaption><span class="fig__name">Tax records</span><span class="fig__line">Owner, legal description, valuation and tax status.</span><button type="button" class="link fig__view" data-view="1" hidden>View full size</button></figcaption>
+    </figure>
+    <figure class="fig" id="d-map">
+      <div class="fit"><div class="doc doc--page">
+        <div class="doc__top"><div class="doc__brand"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>Jones Technologies, Inc.</div><span class="doc__tag">Sample data</span></div>
+        <p class="doc__title">Parcel Map</p>
+        <p class="doc__meta">Sample County GIS. Section 12, T13N, R6W. Not a survey.</p>
+        <svg class="plot" viewBox="0 0 320 250" role="img" aria-label="Section 12 with the northeast quarter and the 80-acre sample tract outlined">
+          <rect x="60" y="20" width="200" height="200" fill="none" stroke="#2A2F36" stroke-width="1"/>
+          <line x1="160" y1="20" x2="160" y2="220" stroke-dasharray="3 3"/>
+          <line x1="60" y1="120" x2="260" y2="120" stroke-dasharray="3 3"/>
+          <polygon class="plot__tract" points="160.0,120.0 258.0,118.8 257.0,84.8 240.6,66.2 159.3,67.3"/>
+          <text class="mid" x="110" y="74">NW¼</text><text class="mid" x="210" y="40">NE¼</text><text class="mid" x="110" y="174">SW¼</text><text class="mid" x="210" y="174">SE¼</text>
+          <text class="mid strong" x="215.0" y="89.4">Sample Parcel</text><text class="mid" x="215.0" y="99.4">80.00 ac</text>
+          <text class="mid strong" x="160" y="13">SECTION 12</text>
+          <line x1="292" y1="58" x2="292" y2="34"/><path class="plot__north" d="M292 30l-3.2 7h6.4z"/><text class="mid strong" x="292" y="26">N</text>
+          <line x1="60" y1="232" x2="98" y2="232"/><text x="102" y="235">1,000 ft</text>
+        </svg>
+        <p class="doc__text">The tract lies in the NE¼ of Section 12. Its southwest corner is the center of the section.</p>
+        <div class="doc__foot"><span>Examined by JTI. Reviewed by J. Sample, 11/02/2026</span><span>Page 1 of 1</span></div>
+      </div></div>
+      <figcaption><span class="fig__name">Mapping</span><span class="fig__line">The parcel located in its section, township and range.</span><button type="button" class="link fig__view" data-view="2" hidden>View full size</button></figcaption>
+    </figure>
+    <figure class="fig" id="d-chain">
+      <div class="fit"><div class="doc doc--page">
+        <div class="doc__top"><div class="doc__brand"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>Jones Technologies, Inc.</div><span class="doc__tag">Sample data</span></div>
+        <p class="doc__title">Chain of Title</p>
+        <p class="doc__meta">Sample Parcel. NE¼, Sec. 12, T13N, R6W. Patent to present.</p>
+        <p class="doc__sub">Surface and ½ oil and gas</p>
+        <table class="doc__table"><colgroup><col style="width:13%"><col style="width:55%"><col style="width:32%"></colgroup>
+          <thead><tr><th scope="col">Year</th><th scope="col">Conveyance</th><th scope="col">Recorded</th></tr></thead>
+          <tbody>
+            <tr><td>1838</td><td>United States to Elias Harper, patent, 160.00 acres</td><td>Pat. 2, Pg. 114</td></tr>
+            <tr><td>1871</td><td>Elias Harper and wife to Jacob Harper, 80.00 acres</td><td>DV 31, Pg. 402</td></tr>
+            <tr><td>1921</td><td>Jacob Harper to Samuel T. Dawson, reserving ½ oil and gas</td><td>DV 98, Pg. 215</td></tr>
+            <tr><td>1966</td><td>Samuel T. Dawson and wife to Harlan E. and Mary L. Whitfield, survivorship</td><td>DV 187, Pg. 77</td></tr>
+            <tr><td>2008</td><td>Affidavit of survivorship, vesting in Mary L. Whitfield</td><td>OR 398, Pg. 512</td></tr>
+            <tr><td>2009</td><td>Mary L. Whitfield, widow, to Miller Ridge Farms LLC</td><td>OR 412, Pg. 1184</td></tr>
+          </tbody></table>
+        <p class="doc__sub">Reserved ½ oil and gas</p>
+        <table class="doc__table"><colgroup><col style="width:13%"><col style="width:55%"><col style="width:32%"></colgroup><tbody>
+            <tr><td>1932</td><td>Estate of Jacob Harper to Ruth Harper Keller and Thomas J. Harper, ¼ each</td><td>DV 112, Pg. 66</td></tr>
+          </tbody></table>
+        <div class="doc__foot"><span>Examined by JTI. Reviewed by J. Sample, 11/02/2026</span><span>Page 1 of 1</span></div>
+      </div></div>
+      <figcaption><span class="fig__name">Chain of title</span><span class="fig__line">Every conveyance from patent to present, with the severance.</span><button type="button" class="link fig__view" data-view="3" hidden>View full size</button></figcaption>
+    </figure>
+  </div>
+
+  <div class="row row--sub" id="d-run">
+    <p class="label">Runsheet</p>
+    <div>
+      <h3 class="subhead">Every entry cites the recorded instrument.</h3>
+      <p class="proof__hint" hidden>Select any entry to open the recorded instrument behind it. <button type="button" class="link" data-view="0" hidden>View the sheet full size</button></p>
+    </div>
+  </div>
+  <div class="proof">
   <div class="proof__grid">
     <div class="proof__sheet"><div class="fit">
       <div class="doc doc--sheet doc--stack">
@@ -282,19 +363,9 @@
     <p class="xnote__text">No conveyance or estate of record for Ruth Harper Keller or Thomas J. Harper after 1932. Heirship must be determined before the oil and gas fractions are final.</p>
     <p class="xnote__who">Flagged by JTI. Decided by the examiner.</p>
   </aside>
-</div></section>
 
-<section class="sec" id="package"><div class="wrap">
-  <div class="row row--rule">
-    <p class="label">The package</p>
-    <div>
-      <h2>The full abstract, examined and ready for your review.</h2>
-      <p class="lede">The same research produces the rest of the package. Each document draws on the same recorded instruments as the runsheet.</p>
-    </div>
-  </div>
-
-  <div class="pages">
-    <figure class="fig">
+  <div class="pages" id="package">
+    <figure class="fig" id="d-owner">
       <div class="fit"><div class="doc doc--page">
         <div class="doc__top"><div class="doc__brand"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>Jones Technologies, Inc.</div><span class="doc__tag">Sample data</span></div>
         <p class="doc__title">Ownership Report</p>
@@ -324,51 +395,9 @@
         <p class="doc__text">3. Mary L. Whitfield took Harlan E. Whitfield&rsquo;s interest as survivor (OR 398, Pg. 512) before conveying in 2009.</p>
         <div class="doc__foot"><span>Examined by JTI. Reviewed by J. Sample, 11/02/2026</span><span>Page 1 of 1</span></div>
       </div></div>
-      <figcaption><span class="fig__name">Ownership report</span><span class="fig__line">Surface, minerals and leasehold, with the open questions flagged.</span><button type="button" class="link fig__view" data-view="1" hidden>View full size</button></figcaption>
+      <figcaption><span class="fig__name">Ownership report</span><span class="fig__line">Surface, minerals and leasehold, with the open questions flagged.</span><button type="button" class="link fig__view" data-view="4" hidden>View full size</button></figcaption>
     </figure>
-
-    <figure class="fig">
-      <div class="fit"><div class="doc doc--page">
-        <div class="doc__top"><div class="doc__brand"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>Jones Technologies, Inc.</div><span class="doc__tag">Sample data</span></div>
-        <p class="doc__title">Chain of Title Flowchart</p>
-        <p class="doc__meta">Sample Parcel, Sample County. Patent to present.</p>
-        <div class="flow">
-          <div class="flow__box"><b>United States of America</b></div>
-          <div class="flow__link"><span>Patent, 1838 · Pat. 2, Pg. 114</span></div>
-          <div class="flow__box"><b>Elias Harper</b><span>NE¼ Sec. 12, T13N, R6W, 160.00 acres</span></div>
-          <div class="flow__link"><span>Warranty Deed, 1871 · DV 31, Pg. 402</span></div>
-          <div class="flow__box"><b>Jacob Harper</b><span>80.00 acres</span></div>
-          <div class="flow__link"><span>Warranty Deed, 1921 · DV 98, Pg. 215</span></div>
-          <div class="flow__bar"></div>
-          <div class="flow__split">
-            <div class="flow__col">
-              <p class="flow__branch">Surface and ½ oil and gas</p>
-              <div class="flow__box"><b>Samuel T. Dawson</b></div>
-              <div class="flow__link"><span>WD, 1966 · DV 187, Pg. 77</span></div>
-              <div class="flow__box"><b>Harlan E. Whitfield and Mary L. Whitfield</b><span>survivorship</span></div>
-              <div class="flow__link"><span>Affidavit of Survivorship, 2008 · OR 398, Pg. 512</span></div>
-              <div class="flow__box"><b>Mary L. Whitfield</b><span>survivor</span></div>
-              <div class="flow__link"><span>WD, 2009 · OR 412, Pg. 1184</span></div>
-              <div class="flow__box flow__box--now"><b>Miller Ridge Farms LLC</b><span>Surface 100%, oil and gas ½</span></div>
-            </div>
-            <div class="flow__col">
-              <p class="flow__branch">Reserved ½ oil and gas</p>
-              <div class="flow__box"><b>Jacob Harper</b><span>by reservation</span></div>
-              <div class="flow__link"><span>Estate, 1932 · DV 112, Pg. 66</span></div>
-              <div class="flow__bar"></div>
-              <div class="flow__split flow__split--pair">
-                <div class="flow__col"><div class="flow__box flow__box--open"><b>Ruth Harper Keller</b><span>¼ · last of record 1932</span></div></div>
-                <div class="flow__col"><div class="flow__box flow__box--open"><b>Thomas J. Harper</b><span>¼ · last of record 1932</span></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="doc__foot"><span>Shaded: current owner of record. Dashed: last shown of record in 1932; successors undetermined.</span><span>Page 1 of 1</span></div>
-      </div></div>
-      <figcaption><span class="fig__name">Flowchart</span><span class="fig__line">The chain from patent to present, including the severance.</span><button type="button" class="link fig__view" data-view="2" hidden>View full size</button></figcaption>
-    </figure>
-
-    <figure class="fig">
+    <figure class="fig" id="d-plots">
       <div class="fit"><div class="doc doc--page">
         <div class="doc__top"><div class="doc__brand"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>Jones Technologies, Inc.</div><span class="doc__tag">Sample data</span></div>
         <p class="doc__title">Deed Plot</p>
@@ -409,18 +438,87 @@
         <p class="doc__text">Area by coordinates 80.00 acres. Closure 0.06 ft in 7,679.33 ft (1:124,688).</p>
         <div class="doc__foot"><span>Examined by JTI. Reviewed by J. Sample, 11/02/2026</span><span>Page 1 of 1</span></div>
       </div></div>
-      <figcaption><span class="fig__name">Deed plot</span><span class="fig__line">The legal description drawn from its calls, with closure and area.</span><button type="button" class="link fig__view" data-view="3" hidden>View full size</button></figcaption>
+      <figcaption><span class="fig__name">Deed plots</span><span class="fig__line">The legal description drawn from its calls, with closure and area.</span><button type="button" class="link fig__view" data-view="5" hidden>View full size</button></figcaption>
+    </figure>
+    <figure class="fig" id="d-flow">
+      <div class="fit"><div class="doc doc--page">
+        <div class="doc__top"><div class="doc__brand"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>Jones Technologies, Inc.</div><span class="doc__tag">Sample data</span></div>
+        <p class="doc__title">Chain of Title Flowchart</p>
+        <p class="doc__meta">Sample Parcel, Sample County. Patent to present.</p>
+        <div class="flow">
+          <div class="flow__box"><b>United States of America</b></div>
+          <div class="flow__link"><span>Patent, 1838 · Pat. 2, Pg. 114</span></div>
+          <div class="flow__box"><b>Elias Harper</b><span>NE¼ Sec. 12, T13N, R6W, 160.00 acres</span></div>
+          <div class="flow__link"><span>Warranty Deed, 1871 · DV 31, Pg. 402</span></div>
+          <div class="flow__box"><b>Jacob Harper</b><span>80.00 acres</span></div>
+          <div class="flow__link"><span>Warranty Deed, 1921 · DV 98, Pg. 215</span></div>
+          <div class="flow__bar"></div>
+          <div class="flow__split">
+            <div class="flow__col">
+              <p class="flow__branch">Surface and ½ oil and gas</p>
+              <div class="flow__box"><b>Samuel T. Dawson</b></div>
+              <div class="flow__link"><span>WD, 1966 · DV 187, Pg. 77</span></div>
+              <div class="flow__box"><b>Harlan E. Whitfield and Mary L. Whitfield</b><span>survivorship</span></div>
+              <div class="flow__link"><span>Affidavit of Survivorship, 2008 · OR 398, Pg. 512</span></div>
+              <div class="flow__box"><b>Mary L. Whitfield</b><span>survivor</span></div>
+              <div class="flow__link"><span>WD, 2009 · OR 412, Pg. 1184</span></div>
+              <div class="flow__box flow__box--now"><b>Miller Ridge Farms LLC</b><span>Surface 100%, oil and gas ½</span></div>
+            </div>
+            <div class="flow__col">
+              <p class="flow__branch">Reserved ½ oil and gas</p>
+              <div class="flow__box"><b>Jacob Harper</b><span>by reservation</span></div>
+              <div class="flow__link"><span>Estate, 1932 · DV 112, Pg. 66</span></div>
+              <div class="flow__bar"></div>
+              <div class="flow__split flow__split--pair">
+                <div class="flow__col"><div class="flow__box flow__box--open"><b>Ruth Harper Keller</b><span>¼ · last of record 1932</span></div></div>
+                <div class="flow__col"><div class="flow__box flow__box--open"><b>Thomas J. Harper</b><span>¼ · last of record 1932</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="doc__foot"><span>Shaded: current owner. Dashed: successors undetermined.</span><span>Page 1 of 1</span></div>
+      </div></div>
+      <figcaption><span class="fig__name">Flowcharts</span><span class="fig__line">The chain from patent to present, including the severance.</span><button type="button" class="link fig__view" data-view="6" hidden>View full size</button></figcaption>
     </figure>
   </div>
 
-  <div class="row row--also">
-    <p class="label">Also in the package</p>
-    <div>
-      <p class="lede">The chain of title, tax records, mapping, and copies of the recorded instruments themselves.</p>
-      <a class="link sample" data-goatcounter-click="sample-pdf" href="assets/jti-sample-pages.pdf" download>Download the sample pages (PDF)</a>
+  <div class="row row--sub" id="d-package">
+    <p class="label">Abstract package</p>
+    <div class="pkgrow">
+      <div>
+        <h3 class="subhead">Everything above, indexed and bound for your review.</h3>
+        <p class="lede">The completed abstract carries every deliverable and a copy of each recorded instrument, ready for examination by your team.</p>
+        <a class="link sample" data-goatcounter-click="sample-pdf" href="assets/jti-sample-pages.pdf" download>Download the sample pages (PDF)</a>
+      </div>
+      <div class="pages pages--single">
+    <figure class="fig" id="d-package-doc">
+      <div class="fit"><div class="doc doc--page">
+        <div class="doc__top"><div class="doc__brand"><svg class="bolt" viewBox="0 0 120 158" aria-hidden="true"><path d="M95 5 10 92h46l-24 62 78-95H71z"/></svg>Jones Technologies, Inc.</div><span class="doc__tag">Sample data</span></div>
+        <p class="doc__title">Abstract of Title</p>
+        <p class="doc__meta">Sample Parcel, Sample County. NE¼, Sec. 12, T13N, R6W, 80.00 acres. Patent (1838) to 10/30/2026.</p>
+        <p class="doc__sub">Contents</p>
+        <table class="doc__table"><colgroup><col style="width:12%"><col style="width:64%"><col style="width:24%"></colgroup>
+          <thead><tr><th scope="col">Tab</th><th scope="col">Document</th><th scope="col">Pages</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Tax Record</td><td>1</td></tr>
+            <tr><td>2</td><td>Parcel Map</td><td>2</td></tr>
+            <tr><td>3</td><td>Chain of Title</td><td>3</td></tr>
+            <tr><td>4</td><td>Runsheet</td><td>4</td></tr>
+            <tr><td>5</td><td>Ownership Report</td><td>5</td></tr>
+            <tr><td>6</td><td>Deed Plot</td><td>6</td></tr>
+            <tr><td>7</td><td>Chain of Title Flowchart</td><td>7</td></tr>
+            <tr><td>8</td><td>Recorded instruments (10)</td><td>8&ndash;17</td></tr>
+          </tbody></table>
+        <div class="doc__foot"><span>Examined by JTI. Reviewed by J. Sample, 11/02/2026</span><span>Page 1 of 1</span></div>
+      </div></div>
+      <figcaption><span class="fig__name">Abstract package</span><span class="fig__line">Every deliverable and recorded instrument, indexed and bound for review.</span><button type="button" class="link fig__view" data-view="7" hidden>View full size</button></figcaption>
+    </figure>
+      </div>
     </div>
   </div>
 </div></section>
+
+
 
 <section class="sec" id="how"><div class="wrap">
   <div class="row row--rule">
