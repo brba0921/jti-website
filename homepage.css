@@ -1208,3 +1208,6 @@ html { scroll-behavior: smooth; }
 #discover .proof__sheet .sheet__table td:nth-child(6), #discover .proof__sheet .sheet__table .cite { white-space: nowrap; font-size: .95em; }
 #discover .proof__sheet .doc--sheet .doc__foot span:last-child { white-space: nowrap; }
 #discover .close__actions { column-gap: 44px; }
+#discover .founder { display: flex; align-items: center; gap: 20px; margin-top: clamp(24px, calc(1.524vw + 18.06px), 40px); }
+#discover .founder .signature { margin-top: 0; }
+#discover .founder__photo { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; flex: none; box-shadow: 0 0 0 1px var(--rule); }
